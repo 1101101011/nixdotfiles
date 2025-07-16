@@ -25,11 +25,7 @@
    </div>
 </h1>
 
-### NixOs Configuration
-
-Contains my NixOs Configuration files with Home Manager.
-
-## Table of Contents
+### Table of Contents
 
 1. [Overview](#overview)
 2. [Systems](#systems)
