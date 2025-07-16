@@ -38,24 +38,42 @@
   in
   {
     nixosConfigurations ={
-      NixOs = nixpkgs.lib.nixosSystem {
+      # Laptop
+      Kurohikari = nixpkgs.lib.nixosSystem {
         inherit system;
-	specialArgs = { 
-	  host = "NixOs";
-	  username = "Shiroe";
-	  inherit self inputs; 
-	};
+	      specialArgs = { 
+	        host = "Kurohikari";
+	        username = "Shiroe";
+	        inherit self inputs; 
+	      };
         modules = [
-          ./hosts/laptop
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager.useGlobalPkgs = true;
-          #   home-manager.useUserPackages = true;
-          #   home-manager.users.Shiroe = import ./modules/home-manager/home.nix;
-          #   home-manager.extraSpecialArgs = { inherit inputs; };
-          # }
+          ./hosts/kurohikari
         ];
       };
+      # # Desktop
+      # Kuroha = nixpkgs.lib.nixosSystem {
+      #   inherit system;
+	     #  specialArgs = { 
+	     #    host = "Kurohikari";
+	     #    username = "Shiroe";
+	     #    inherit self inputs; 
+	     #  };
+      #   modules = [
+      #     ./hosts/kuroha
+      #   ];
+      # };
+      # # Virtual Machine
+      # Kagami = nixpkgs.lib.nixosSystem {
+      #   inherit system;
+	     #  specialArgs = { 
+	     #    host = "Kagami";
+	     #    username = "Shiroe";
+	     #    inherit self inputs; 
+	     #  };
+      #   modules = [
+      #     ./hosts/kagami
+      #   ];
+      # };
     };
   };
 }

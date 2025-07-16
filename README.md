@@ -49,8 +49,8 @@ List of Systems Configured in this flakes:
 | System 	   | Architecture                   	| Description                               	|
 |-----------   |--------------------------------	|-------------------------------------------	|
 | 💻 Kurohikari| `x86_64-linux`                 	| ThinkPad T480 laptop, for development.    	|
-| 🖥️ kuroha    | `x86_64-linux`                 	| Main PC, mix of Gaming and Development.   	|
-| 💾 kagami    | `x86_64-linux`                 	| Virtual Machine, for Project Deployment.      |
+| 🖥️ Kuroha    | `x86_64-linux`                 	| Main PC, mix of Gaming and Development.   	|
+| 💾 Kagami    | `x86_64-linux`                 	| Virtual Machine, for Project Deployment.      |
 
 ## Desktop Environment
 
