@@ -71,6 +71,7 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 ## Installation
 
 > [!NOTE]
+> The script to automate the installation process is a work in progress and will be available soon.
 > The Documentation for the installation process is currently a work in progress.
 
 > [!IMPORTANT]
