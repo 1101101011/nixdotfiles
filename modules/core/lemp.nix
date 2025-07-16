@@ -7,30 +7,44 @@
         enableACME = false; # Optional: Enables Let's Encrypt SSL
         forceSSL = false;   # Optional: Forces HTTPS
         root = "/var/www/phpmyadmin";
-	locations."~ \\.php$".extraConfig = ''
+	      locations."/".extraConfig = ''
+          index index.php;
+          try_files $uri $uri/ /index.php?$query_string;
+        '';
+	      locations."~ \.php$".extraConfig = ''
+          include ${pkgs.nginx}/conf/fastcgi.conf;
           fastcgi_pass  unix:${config.services.phpfpm.pools.mypool.socket};
           fastcgi_index index.php;
+          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         '';
       };
     };
     phpfpm.pools."mypool" = {
       user = "nobody";
       # group = "nogroup";
-      # phpPackage = pkgs.php81.withExtensions ({ enabled, all }: enabled ++ [ all.mysqli all.gd ]);
+      phpPackage = pkgs.php84.withExtensions ({ enabled, all }: enabled ++ [ all.mysqli all.gd ]);
       settings = {
         "pm" = "dynamic";
-	"listen.owner" = config.services.nginx.user;
+	      "listen.owner" = config.services.nginx.user;
         "pm.max_children" = 5;
         "pm.start_servers" = 2;
         "pm.min_spare_servers" = 1;
         "pm.max_spare_servers" = 3;
         "pm.max_requests" = 500;
       };
-      # phpOptions = ''
-      #   upload_max_filesize = 200M
-      #   post_max_size = 200M
-      #   date.timezone = "Asia/Manila"
-      # '';
+      phpOptions = ''
+        upload_max_filesize = 2G
+        post_max_size = 3G
+        max_execution_time = 6000
+        max_input_time = 3000
+        mbstring.http_input = pass
+        mbstring.http_output = pass
+        mbstring.internal_encoding = pass 
+        memory_limit = 2G
+        allow_url_include = on;
+        display_errors = on;
+        date.timezone = "Asia/Manila"
+      '';
     };
     mysql = {
       enable = true;
@@ -53,7 +67,6 @@
     };
     postgresql = {
       enable = true;
-      # ensureDatabases = [ "mydatabase" ];
       enableTCPIP = true;
       settings.port = 5432;
       authentication = pkgs.lib.mkOverride 10 ''
@@ -76,7 +89,6 @@
         "ALLOWED_HOSTS" = [ "127.0.0.1" "localhost" "192.168.1.0/24" ];
       };
       minimumPasswordLength = 6;
-
     };
   };
 }

@@ -3,7 +3,7 @@
   imports = [
     ./boot.nix
     ./hardware.nix
-    ./lampp.nix
+    ./lemp.nix
     ./locale.nix
     ./networking.nix
     ./steam.nix

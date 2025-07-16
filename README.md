@@ -42,8 +42,8 @@ This repository contains my personal NixOS configuration files, which are used t
 
 ## Systems
 > [!NOTE]
-> The only system that is currently available is `Kurohikari`
-> The other systems area work in progress and will be available soon.
+> The only system that is currently available is `Kurohikari`.
+> The other systems are work in progress and will be available soon.
 
 List of Systems Configured in this flakes:
 | System 	   | Architecture                   	| Description                               	|
@@ -71,7 +71,7 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 ## Installation
 
 > [!NOTE]
-> The script to automate the installation process is a work in progress and will be available soon.
+> The script to automate the installation process is work in progress and will be available soon.
 > The Documentation for the installation process is currently a work in progress.
 
 > [!IMPORTANT]
@@ -80,6 +80,7 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 ## Roadmap
 - [X] Merge the `home-manager` standalone module into the `nixos` module.
 - [ ] Create an installation script to automate the `nixos` setup process.
+- [ ] Update the nvim configuration to use the latest plugins and features.
 - [ ] Integrate hyprland configuration into the `nixos` module.
 - [ ] Switch from using EWW into Quickshell for more advanced widgets.
 - [ ] Make a dyanamic theme switcher for Hyprland and other applications.

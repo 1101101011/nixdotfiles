@@ -14,6 +14,7 @@
     # podman-tui
     # podman-compose
     # dive
+    lazydocker
   ];
 
   virtualisation = {

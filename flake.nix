@@ -50,30 +50,30 @@
           ./hosts/kurohikari
         ];
       };
-      # # Desktop
-      # Kuroha = nixpkgs.lib.nixosSystem {
-      #   inherit system;
-	     #  specialArgs = { 
-	     #    host = "Kurohikari";
-	     #    username = "Shiroe";
-	     #    inherit self inputs; 
-	     #  };
-      #   modules = [
-      #     ./hosts/kuroha
-      #   ];
-      # };
-      # # Virtual Machine
-      # Kagami = nixpkgs.lib.nixosSystem {
-      #   inherit system;
-	     #  specialArgs = { 
-	     #    host = "Kagami";
-	     #    username = "Shiroe";
-	     #    inherit self inputs; 
-	     #  };
-      #   modules = [
-      #     ./hosts/kagami
-      #   ];
-      # };
+      # Desktop
+      Kuroha = nixpkgs.lib.nixosSystem {
+        inherit system;
+	      specialArgs = { 
+	        host = "Kurohikari";
+	        username = "Shiroe";
+	        inherit self inputs; 
+	      };
+        modules = [
+          ./hosts/kuroha
+        ];
+      };
+      # Virtual Machine
+      Kagami = nixpkgs.lib.nixosSystem {
+        inherit system;
+	      specialArgs = { 
+	        host = "Kagami";
+	        username = "Shiroe";
+	        inherit self inputs; 
+	      };
+        modules = [
+          ./hosts/kagami
+        ];
+      };
     };
   };
 }
