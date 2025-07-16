@@ -14,6 +14,7 @@ return {
         null_ls.builtins.formatting.shfmt,
         -- null_ls.builtins.formatting.phpcsfixer,
         null_ls.builtins.formatting.blade_formatter,
+        null_ls.builtins.diagnostics.hadolint,
         -- null_ls.builtins.formatting.format_r,
         -- null_ls.builtins.formatting.styler,
         -- null_ls.builtins.diagnostics.lintr,

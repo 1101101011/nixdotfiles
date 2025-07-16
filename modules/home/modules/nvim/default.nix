@@ -40,6 +40,10 @@ in
     #     writexl
     #   ];
     # })
+    # docker
+    docker-compose-language-service
+    dockerfile-language-server-nodejs
+    docker-language-server
     # intelephense
     phpactor
     omnisharp-roslyn
@@ -49,8 +53,10 @@ in
     typescript-language-server
     vscode-langservers-extracted
     vue-language-server
+    # vtsls
     csharp-ls
     # formatters
+    hadolint
     alejandra
     blade-formatter
     csharpier
