@@ -57,6 +57,9 @@ List of Systems Configured in this flakes:
 I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dynamic tiling Wayland compositor. It provides a modern and efficient user interface with support for advanced features like animations, effects, and custom layouts.
 
 ### Gallery
+> [!NOTE]
+> This section showcases some screenshots of my Hyprland setup.
+> The configuration for this setup is not yet available in this repository, but it will be added in the future.
 <p align="center">
    <img src="./.github/assets/screenshots/1.png" style="margin-bottom: 15px;"/> <br>
    <img src="./.github/assets/screenshots/2.png" style="margin-bottom: 15px;"/> <br>
@@ -75,11 +78,11 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 
 ## Roadmap
 - [X] Merge the `home-manager` standalone module into the `nixos` module.
-- [ ] Create an installation script to automate the setup process.
-- [ ] Integrate hyprland configuration into the NixOS module.
+- [ ] Create an installation script to automate the `nixos` setup process.
+- [ ] Integrate hyprland configuration into the `nixos` module.
 - [ ] Switch from using EWW into Quickshell for more advanced widgets.
 - [ ] Make a dyanamic theme switcher for Hyprland and other applications.
-- [ ] Make the NixOS configuration more modular and reusable.
+- [ ] Make the `nixos` configuration more modular, dynamic and reusable based on the host.
 - [ ] Add more documentation and examples for users to understand the configuration.
 
 ## Contributing
