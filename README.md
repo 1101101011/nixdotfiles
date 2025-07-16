@@ -75,7 +75,7 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 
 ## Roadmap
 - [X] Merge the `home-manager` standalone module into the `nixos` module.
-- [ ] Create an intallation script to automate the setup process.
+- [ ] Create an installation script to automate the setup process.
 - [ ] Integrate hyprland configuration into the NixOS module.
 - [ ] Switch from using EWW into Quickshell for more advanced widgets.
 - [ ] Make a dyanamic theme switcher for Hyprland and other applications.
