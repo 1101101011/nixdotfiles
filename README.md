@@ -42,7 +42,7 @@ This repository contains my personal NixOS configuration files, which are used t
 
 ## Systems
 > [!NOTE]
-> The only system that is currently available is `Kuroha`
+> The only system that is currently available is `Kurohikari`
 > The other systems area work in progress and will be available soon.
 
 List of Systems Configured in this flakes:
