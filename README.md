@@ -25,7 +25,7 @@
    </div>
 </h1>
 
-### Table of Contents
+# Table of Contents
 
 1. [Overview](#overview)
 2. [Systems](#systems)
@@ -56,7 +56,7 @@ List of Systems Configured in this flakes:
 
 I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dynamic tiling Wayland compositor. It provides a modern and efficient user interface with support for advanced features like animations, effects, and custom layouts.
 
-# Gallery
+### Gallery
 <p align="center">
    <img src="./.github/assets/screenshots/1.png" style="margin-bottom: 15px;"/> <br>
    <img src="./.github/assets/screenshots/2.png" style="margin-bottom: 15px;"/> <br>
