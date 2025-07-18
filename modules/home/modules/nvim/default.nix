@@ -44,7 +44,7 @@ in
     docker-compose-language-service
     dockerfile-language-server-nodejs
     docker-language-server
-    # intelephense
+    intelephense
     phpactor
     omnisharp-roslyn
     sqls

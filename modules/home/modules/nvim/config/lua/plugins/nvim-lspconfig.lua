@@ -12,8 +12,8 @@ return {
     vim.lsp.enable('html')
     vim.lsp.enable('cssls')
     vim.lsp.enable('vue_ls')
-    vim.lsp.enable('phpactor')
-    -- vim.lsp.enable('intelephense')
+    -- vim.lsp.enable('phpactor')
+    vim.lsp.enable('intelephense')
     vim.lsp.enable('sqls')
     vim.lsp.enable('csharp_ls')
     vim.lsp.enable('omnisharp')
@@ -99,10 +99,10 @@ return {
     	on_attach = on_attach,
     	capabilities = capabilities,
     })
-    --[[ vim.lsp.config('intelephense',{
+    vim.lsp.config('intelephense',{
     	on_attach = on_attach,
     	capabilities = capabilities,
-    }) ]]
+    })
     vim.lsp.config('sqls',{
     	on_attach = on_attach,
     	capabilities = capabilities,
