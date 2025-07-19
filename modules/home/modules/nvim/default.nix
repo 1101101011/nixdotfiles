@@ -22,6 +22,8 @@ let
 in
 {
   home.packages = with pkgs; [
+    android-tools
+    sdkmanager
     # lsp
     bash-language-server
     clang-tools
@@ -84,7 +86,7 @@ in
       indent-blankline-nvim
       gruvbox-material
       comment-nvim
-      flutter-tools-nvim
+      # flutter-tools-nvim
       which-key-nvim
       mini-nvim
       telescope-nvim
