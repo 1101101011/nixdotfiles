@@ -25,6 +25,8 @@ in
     # lsp
     bash-language-server
     clang-tools
+    # dart
+    flutter329
     lua-language-server
     nil
     # (rWrapper.override {
@@ -63,7 +65,7 @@ in
     stylua
     eslint
     eslint_d
-    nodePackages.prettier
+    # nodePackages.prettier
     prettierd
     # phpPackages.php-cs-fixer
     shellcheck
@@ -82,6 +84,7 @@ in
       indent-blankline-nvim
       gruvbox-material
       comment-nvim
+      flutter-tools-nvim
       which-key-nvim
       mini-nvim
       telescope-nvim

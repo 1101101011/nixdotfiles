@@ -11,6 +11,7 @@ return {
     vim.lsp.enable('eslint_d')
     vim.lsp.enable('html')
     vim.lsp.enable('cssls')
+    vim.lsp.enable('dartls')
     vim.lsp.enable('vue_ls')
     -- vim.lsp.enable('phpactor')
     vim.lsp.enable('intelephense')
@@ -75,6 +76,28 @@ return {
     vim.lsp.config('cssls',{
     	on_attach = on_attach,
     	capabilities = capabilities,
+    })
+    vim.lsp.config('dartls',{
+    	on_attach = on_attach,
+    	capabilities = capabilities,
+      filetypes = { 'dart' },
+      cmd = { "dart", "language-server", "--protocol=lsp" },
+      init_options = {
+        {
+          closingLabels = true,
+          flutterOutline = true,
+          onlyAnalyzeProjectsWithOpenFiles = true,
+          outline = true,
+          suggestFromUnimportedLibraries = true
+        }
+      },
+      root_markers = { "pubspec.yaml" },
+      settings = {
+        dart = {
+          completeFunctionCalls = true,
+          showTodos = true
+        }
+      }
     })
     vim.lsp.config('vue_ls',{
       on_attach = on_attach,

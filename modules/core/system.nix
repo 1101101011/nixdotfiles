@@ -34,6 +34,7 @@
     gtk2
     gtk3
     gtk4
+    gum
     jq
     # kitty
     lazygit
