@@ -18,7 +18,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" "nginx" ];
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "nginx" "kvm" "adbusers" ];
   };
   security.sudo.extraRules = [
     {

@@ -22,57 +22,54 @@ let
 in
 {
   home.packages = with pkgs; [
-    android-tools
-    sdkmanager
     # lsp
+    # cargo
+    # vtsls
     bash-language-server
     clang-tools
+    csharp-ls
     # dart
-    flutter329
+    # flutter329
+    docker-compose-language-service
+    docker-language-server
+    dockerfile-language-server-nodejs
+    intelephense
     lua-language-server
     nil
+    omnisharp-roslyn
+    phpactor
     # (rWrapper.override {
     #   packages = with rPackages; [ 
-    #     languageserver 
-    #     formatR
-    #     lintr
-    #     styler
-    #     ggplot2
     #     dplyr
-    #     xlsx
+    #     formatR
+    #     ggplot2
+    #     languageserver 
+    #     lintr
     #     readxl
+    #     styler
     #     writexl
+    #     xlsx
     #   ];
     # })
-    # docker
-    docker-compose-language-service
-    dockerfile-language-server-nodejs
-    docker-language-server
-    intelephense
-    phpactor
-    omnisharp-roslyn
-    sqls
-    # cargo
     rust-analyzer
+    sqls
     typescript-language-server
     vscode-langservers-extracted
     vue-language-server
-    # vtsls
-    csharp-ls
     # formatters
-    hadolint
+    # nodePackages.prettier
+    # phpPackages.php-cs-fixer
     alejandra
     blade-formatter
     csharpier
-    stylua
     eslint
     eslint_d
-    # nodePackages.prettier
+    hadolint
     prettierd
-    # phpPackages.php-cs-fixer
     shellcheck
     shfmt
     sqlfluff
+    stylua
     # debuggers
     # lldb_19
     # gdb

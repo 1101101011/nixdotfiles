@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     awscli2
+    android-studio
     # aseprite
     inputs.zen-browser.packages."${system}".default
     # blender
