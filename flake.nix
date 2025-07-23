@@ -30,6 +30,7 @@
 
   outputs = { self, nixpkgs, ... } @ inputs: 
   let
+	  username = "Shiroe";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
@@ -43,8 +44,7 @@
         inherit system;
 	      specialArgs = { 
 	        host = "Kurohikari";
-	        username = "Shiroe";
-	        inherit self inputs; 
+	        inherit self inputs username; 
 	      };
         modules = [
           ./hosts/kurohikari
@@ -55,8 +55,7 @@
         inherit system;
 	      specialArgs = { 
 	        host = "Kurohikari";
-	        username = "Shiroe";
-	        inherit self inputs; 
+	        inherit self inputs username; 
 	      };
         modules = [
           ./hosts/kuroha
@@ -67,8 +66,7 @@
         inherit system;
 	      specialArgs = { 
 	        host = "Kagami";
-	        username = "Shiroe";
-	        inherit self inputs; 
+	        inherit self inputs username; 
 	      };
         modules = [
           ./hosts/kagami

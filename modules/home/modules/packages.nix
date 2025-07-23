@@ -1,11 +1,21 @@
-{ lib, pkgs, inputs, ... }:
+{ lib, config, pkgs, inputs, ... }:
+let
+  retroarchCustom = (pkgs.retroarch.withCores (
+    cores: with cores; [
+        desmume
+        mgba
+        genesis-plus-gx
+        snes9x
+        beetle-psx-hw
+    ]
+  ));
+in 
 {
   home.packages = with pkgs; [
-    awscli2
     # aseprite
-    inputs.zen-browser.packages."${system}".default
-    # blender
+    awscli2
     bat
+    # blender
     brave
     discord
     eww
@@ -14,6 +24,7 @@
     # gimp
     hypridle
     hyprpaper
+    inputs.zen-browser.packages."${system}".default
     kitty
     laravel
     libreoffice-still
@@ -24,6 +35,17 @@
     protonup-ng
     # qbittorrent
     qview
+    /* (retroarch.override {
+      cores = with libretro; [
+        desmume
+        mgba
+        genesis-plus-gx
+        snes9x
+        beetle-psx-hw
+      ];
+    }) */
+    retroarchCustom
+    # retroarch-full
     rofi-wayland
     # tetrio-desktop
     vlc

@@ -7,7 +7,7 @@
       userName = "1101101011";
       userEmail = "ilardecharles@gmail.com";
       extraConfig = {
-        init.defaultBranch = "master";
+        init.defaultBranch = "main";
         pull.rebase = true;
         credential.helper = "oauth";
       };

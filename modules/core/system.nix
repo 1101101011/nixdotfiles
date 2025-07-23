@@ -39,6 +39,7 @@
     # kitty
     lazygit
     libgcc
+    lm_sensors
     lsd
     meson
     mpc-cli
