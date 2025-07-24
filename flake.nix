@@ -47,7 +47,7 @@
 	        inherit self inputs username; 
 	      };
         modules = [
-          ./hosts/kurohikari
+          ./hosts/Kurohikari
         ];
       };
       # Desktop
@@ -58,7 +58,7 @@
 	        inherit self inputs username; 
 	      };
         modules = [
-          ./hosts/kuroha
+          ./hosts/Kuroha
         ];
       };
       # Virtual Machine
@@ -69,7 +69,7 @@
 	        inherit self inputs username; 
 	      };
         modules = [
-          ./hosts/kagami
+          ./hosts/Kagami
         ];
       };
     };
