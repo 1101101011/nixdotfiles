@@ -91,6 +91,7 @@ Step 2: Enter the cloned directory
 ```bash
     cd nixdotfiles
 ```
+
 > [!NOTE]
 > If you still haven't generated your system configuration do step 3, if you already have a system configuration, proceed to step 4.
 
