@@ -124,7 +124,7 @@ install() {
     "${YELLOW}Starting the NixOS configuration Build, do you want to continue? (y/n)${NORMAL}"
   then
     CONFIRM="yes"
-    sudo nixos-rebuild switch --flake .#${CURRENT_HOSTNAME}
+    sudo nixos-rebuild switch --flake .#${HOST}
   else
     if [ $? -eq 130 ]; then  # 130 = Ctrl+C
       echo -e "${RED}Cancelling Installation...${NORMAL}"
