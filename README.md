@@ -77,12 +77,13 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 > It is recommended to read the [NixOS manual](https://nixos.org/manual/nixos/stable/) before proceeding.
 
 Step 1: Clone the repository
+HTTPS
 ```bash
-    #HTTPS
     git clone https://github.com/1101101011/nixdotfiles.git
-    #SSH
+```
+SSH
+```bash
     git clone git@github.com:1101101011/nixdotfiles.git
-
 ```
 Step 2: Enter the cloned directory
 ```bash
