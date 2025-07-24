@@ -69,17 +69,41 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 </p>
 
 ## Installation
-
 > [!NOTE]
-> The script to automate the installation process is work in progress and will be available soon.
-> The Documentation for the installation process is currently a work in progress.
+> You can configure the packages and services you want to use in the`modules` directory to suit your needs.
 
 > [!IMPORTANT]
-> This configuration is designed to be used with NixOS and requires a basic understanding of Nix and NixOS concepts. It is recommended to read the [NixOS manual](https://nixos.org/manual/nixos/stable/) before proceeding.
+> This configuration is designed to be used with NixOS and requires a basic understanding of Nix and NixOS concepts. 
+> It is recommended to read the [NixOS manual](https://nixos.org/manual/nixos/stable/) before proceeding.
+
+Step 1: Clone the repository
+```bash
+    #HTTPS
+    git clone https://github.com/1101101011/nixdotfiles.git
+    #SSH
+    git clone git@github.com:1101101011/nixdotfiles.git
+
+```
+Step 2: Enter the cloned directory
+```bash
+    cd nixdotfiles
+```
+> [!NOTE]
+> If you still haven't generated your system configuration do the step 3, if you already have a system configuration, skip to step 4.
+
+Step 3: 
+```bash
+    nixos-generate-config
+```
+
+Step 4: Run the Installation Script
+```bash
+    ./install.sh
+```
 
 ## Roadmap
 - [X] Merge the `home-manager` standalone module into the `nixos` module.
-- [ ] Create an installation script to automate the `nixos` setup process.
+- [X] Create an installation script to automate the `nixos` setup process.
 - [ ] Update the nvim configuration to use the latest plugins and features.
 - [ ] Integrate hyprland configuration into the `nixos` module.
 - [ ] Switch from using EWW into Quickshell for more advanced widgets.
