@@ -76,6 +76,11 @@ I use the [Hyprland](https://hyprland.org/) desktop environment, which is a dyna
 > This configuration is designed to be used with NixOS and requires a basic understanding of Nix and NixOS concepts. 
 > It is recommended to read the [NixOS manual](https://nixos.org/manual/nixos/stable/) before proceeding.
 
+Step 1: Install dependencies before proceeding with the installation.
+```bash
+    nix-shell -p git gum
+``` 
+
 Step 1: Clone the repository
 
 HTTPS
