@@ -33,7 +33,7 @@ in
     nitch
     obs-studio
     protonup-ng
-    # qbittorrent
+    qbittorrent
     qview
     /* (retroarch.override {
       cores = with libretro; [
