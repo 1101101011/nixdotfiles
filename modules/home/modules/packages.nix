@@ -2,11 +2,11 @@
 let
   retroarchCustom = (pkgs.retroarch.withCores (
     cores: with cores; [
-        desmume
-        mgba
-        genesis-plus-gx
-        snes9x
-        beetle-psx-hw
+      desmume
+      mgba
+      genesis-plus-gx
+      snes9x
+      beetle-psx-hw
     ]
   ));
 in 
@@ -35,17 +35,7 @@ in
     protonup-ng
     qbittorrent
     qview
-    /* (retroarch.override {
-      cores = with libretro; [
-        desmume
-        mgba
-        genesis-plus-gx
-        snes9x
-        beetle-psx-hw
-      ];
-    }) */
     retroarchCustom
-    # retroarch-full
     rofi-wayland
     # tetrio-desktop
     vlc

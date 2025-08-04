@@ -10,11 +10,16 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.gruvbox-gtk-theme;
+      package = pkgs.gruvbox-gtk-theme.override {
+        sizeVariants = [ "standard" ];
+        colorVariants = [ "dark" ];
+			};
       name = "Gruvbox-Dark";
     };
     iconTheme = {
-      package = pkgs.gruvbox-plus-icons;
+      package = pkgs.gruvbox-plus-icons.override {
+				folder-color = "blue";
+			};
       name = "Gruvbox-Plus-Dark";
     };
     font = {
