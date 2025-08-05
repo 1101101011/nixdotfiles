@@ -10,10 +10,7 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.gruvbox-gtk-theme.override {
-        sizeVariants = [ "standard" ];
-        colorVariants = [ "dark" ];
-			};
+      package = pkgs.gruvbox-gtk-theme;
       name = "Gruvbox-Dark";
     };
     iconTheme = {
