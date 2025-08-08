@@ -1,4 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 {
   home.sessionVariables.GTK_THEME = "Gruvbox-Dark";
   home.pointerCursor = {
@@ -15,8 +21,8 @@
     };
     iconTheme = {
       package = pkgs.gruvbox-plus-icons.override {
-				folder-color = "blue";
-			};
+        folder-color = "blue";
+      };
       name = "Gruvbox-Plus-Dark";
     };
     font = {

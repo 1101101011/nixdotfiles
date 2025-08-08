@@ -1,6 +1,12 @@
-{ lib, config, pkgs, inputs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 let
-  retroarchCustom = (pkgs.retroarch.withCores (
+  retroarchCustom = pkgs.retroarch.withCores (
     cores: with cores; [
       desmume
       mgba
@@ -8,8 +14,8 @@ let
       snes9x
       beetle-psx-hw
     ]
-  ));
-in 
+  );
+in
 {
   home.packages = with pkgs; [
     # aseprite

@@ -3,8 +3,8 @@
   config,
   helix,
   ...
-}: {
-
+}:
+{
   programs.helix = {
     enable = true;
     settings = {
@@ -29,9 +29,8 @@
     themes = {
       gruvbox-theme = {
         "inherits" = "gruvbox";
-        "ui.background" = {};
+        "ui.background" = { };
       };
     };
   };
 }
-

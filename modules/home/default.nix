@@ -1,4 +1,12 @@
-{ config, lib, pkgs, inputs, username, host, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  username,
+  host,
+  ...
+}:
 {
   # home-manager = {
   #   home.username = "${username}";

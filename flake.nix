@@ -38,7 +38,7 @@
     };
   in
   {
-    nixosConfigurations ={
+    nixosConfigurations = {
       # Laptop
       Kurohikari = nixpkgs.lib.nixosSystem {
         inherit system;
