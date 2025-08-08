@@ -2,6 +2,19 @@ return {
   setup = function()
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    local on_attach = function(client, bufnr)
+      local opts = { noremap = true, silent = true, buffer = bufnr }
+
+      vim.keymap.set("n", "<Leader>cd", vim.lsp.buf.definition, opts)
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+      vim.keymap.set("n", "<Leader>ci", vim.lsp.buf.implementation, opts)
+      vim.keymap.set("n", "<Leader>cr", vim.lsp.buf.references, opts)
+      vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, opts)
+      vim.keymap.set("n", "<Leader>cf", function()
+        vim.lsp.buf.format({ async = true })
+      end, opts)
+    end
+
     vim.lsp.enable('dockerls')
     vim.lsp.enable('docker_compose_language_service')
     vim.lsp.enable('docker_language_service')
@@ -200,11 +213,5 @@ return {
         prefix = "",
       },
     })
-    
-    vim.keymap.set("n", "<Leader>cd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<Leader>ci", vim.lsp.buf.implementation, opts)
-    vim.keymap.set("n", "<Leader>cr", vim.lsp.buf.references, {})
-    vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
   end
 }

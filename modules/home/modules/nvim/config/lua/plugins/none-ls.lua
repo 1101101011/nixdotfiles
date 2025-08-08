@@ -24,7 +24,5 @@ return {
         require("none-ls.diagnostics.eslint_d"),
       },
     })
-    
-    vim.keymap.set("n", "<Leader>cf", vim.lsp.buf.format, {})
   end
 }
