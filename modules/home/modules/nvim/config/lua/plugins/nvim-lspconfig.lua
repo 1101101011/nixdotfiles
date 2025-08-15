@@ -35,8 +35,24 @@ return {
     vim.lsp.enable('rust_analyzer')
     -- vim.lsp.enable('r_language_server')
     vim.lsp.enable('bashls')
+    --latex
+    vim.lsp.enable('textlab')
+    -- vim.lsp.enable('digestif')
+    vim.lsp.enable('ltex_plus')
 
-
+    --latex
+    vim.lsp.config('textlab', {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
+    -- vim.lsp.config('digestif', {
+    --   on_attach = on_attach,
+    --   capabilities = capabilities,
+    -- })
+    vim.lsp.config('ltext_plus', {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
     -- docker
     vim.lsp.config('dockerls',{
       on_attach = on_attach,

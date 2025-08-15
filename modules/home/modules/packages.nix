@@ -33,6 +33,7 @@ in
     inputs.zen-browser.packages."${system}".default
     kitty
     laravel
+    texliveFull
     libreoffice-still
     # mangohud
     nautilus

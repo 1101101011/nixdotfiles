@@ -51,8 +51,12 @@ in
     #     xlsx
     #   ];
     # })
-    rust-analyzer
+    # rust-analyzer
     sqls
+    textidote
+    # digestif
+    ltex-ls-plus
+    texlab
     typescript-language-server
     vscode-langservers-extracted
     vue-language-server
