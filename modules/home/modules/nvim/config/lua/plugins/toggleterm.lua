@@ -1,13 +1,15 @@
 return {
   setup = function()
-    require("toggleterm").setup({
+    local toggleterm = require("toggleterm")
+    toggleterm.setup({
       float_opts = {
-        border = 'curved',
-        title_pos = 'right'
+        border = "curved",
+        title_pos = "right",
       },
     })
-    vim.keymap.set('n', '<Leader>tf', ':ToggleTerm direction=float <CR>', {})
-    vim.keymap.set('n', '<Leader>tv', ':ToggleTerm direction=vertical <CR>', {})
-    vim.keymap.set('n', '<Leader>th', ':ToggleTerm direction=horizontal <CR>', {})
-  end
+    -- local opts = { noremap = true, silent = true }
+    vim.keymap.set('n', '<Leader>tf', '<cmd>ToggleTerm direction=float<CR>', {})
+    vim.keymap.set('n', '<Leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', {})
+    vim.keymap.set('n', '<Leader>th', '<cmd>ToggleTerm direction=horizontal<CR>', {})
+  end,
 }

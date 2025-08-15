@@ -5,7 +5,7 @@ return {
       bg = "#282828",
       fg = "#e2cca9",
     }
-    
+
     custom_theme = {
       normal = {
         a = { fg = custom_colors.fg, bg = custom_colors.bg },
@@ -16,29 +16,29 @@ return {
         z = { fg = custom_colors.fg, bg = custom_colors.bg },
       },
     }
-    
+
     local function mode_abbrev()
       local mode_map = {
-        ['n']    = 'NOR',  -- Normal
-        ['i']    = 'INS',  -- Insert
-        ['v']    = 'VIS',  -- Visual
-        ['V']    = 'V-L',  -- Visual Line
-        ['␖']   = 'V-B',  -- Visual Block
-        ['c']    = 'CMD',  -- Command-line
-        ['R']    = 'REP',  -- Replace
-        ['s']    = 'SEL',  -- Select
-        ['S']    = 'S-L',  -- Select Line
-        ['␓']   = 'S-B',  -- Select Block
-        ['t']    = 'TER',  -- Terminal
-        ['Rv']   = 'V-R',  -- Virtual Replace
-        ['rm']   = 'MORE', -- More
-        ['r']    = 'HIT',  -- Hit-Enter
-        ['!']    = 'SHELL',-- Shell
+        ["n"] = "NOR", -- Normal
+        ["i"] = "INS", -- Insert
+        ["v"] = "VIS", -- Visual
+        ["V"] = "V-L", -- Visual Line
+        ["␖"] = "V-B", -- Visual Block
+        ["c"] = "CMD", -- Command-line
+        ["R"] = "REP", -- Replace
+        ["s"] = "SEL", -- Select
+        ["S"] = "S-L", -- Select Line
+        ["␓"] = "S-B", -- Select Block
+        ["t"] = "TER", -- Terminal
+        ["Rv"] = "V-R", -- Virtual Replace
+        ["rm"] = "MORE", -- More
+        ["r"] = "HIT", -- Hit-Enter
+        ["!"] = "SHELL", -- Shell
       }
       local mode_code = vim.api.nvim_get_mode().mode
-      return mode_map[mode_code] or 'UNK' -- Fallback to 'UNK' for unknown modes
+      return mode_map[mode_code] or "UNK" -- Fallback to 'UNK' for unknown modes
     end
-    
+
     require("lualine").setup({
       options = {
         icons_enabled = true,
@@ -81,5 +81,5 @@ return {
       inactive_winbar = {},
       extensions = {},
     })
-  end
+  end,
 }

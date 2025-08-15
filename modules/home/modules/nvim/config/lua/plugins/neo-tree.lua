@@ -15,6 +15,6 @@ return {
     vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "NONE" })
     vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "NONE", fg = "NONE" })
     
-    vim.keymap.set("n", "<C-f>", ":Neotree toggle filesystem right<CR>", {})
+    vim.keymap.set("n", "<C-f>", "<cmd>Neotree toggle filesystem right<CR>", {})
   end
 }

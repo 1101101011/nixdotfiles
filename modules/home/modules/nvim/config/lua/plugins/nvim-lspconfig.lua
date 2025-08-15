@@ -2,6 +2,7 @@ return {
   setup = function()
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
     local on_attach = function(client, bufnr)
       local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -14,102 +15,64 @@ return {
         vim.lsp.buf.format({ async = true })
       end, opts)
     end
+    local language_servers = {
+      "dockerls",
+      "docker_compose_language_service",
+      "docker_language_service",
+      "lua_ls",
+      "nil_ls",
+      "eslint",
+      "eslint_d",
+      "html",
+      "cssls",
+      "dartls",
+      "vue_ls",
+      --"phpactor", -- not working
+      "intelephense",
+      "sqls",
+      "csharp_ls",
+      "omnisharp",
+      "clangd",
+      "rust_analyzer",
+      --"r_language_server", -- not working
+      "bashls",
+      "textlab",
+      --"digestif", -- not working
+      "ltex_plus",
+    }
 
-    vim.lsp.enable('dockerls')
-    vim.lsp.enable('docker_compose_language_service')
-    vim.lsp.enable('docker_language_service')
-    vim.lsp.enable('lua_ls')
-    vim.lsp.enable('nil_ls')
-    vim.lsp.enable('eslint')
-    vim.lsp.enable('eslint_d')
-    vim.lsp.enable('html')
-    vim.lsp.enable('cssls')
-    vim.lsp.enable('dartls')
-    vim.lsp.enable('vue_ls')
-    -- vim.lsp.enable('phpactor')
-    vim.lsp.enable('intelephense')
-    vim.lsp.enable('sqls')
-    vim.lsp.enable('csharp_ls')
-    vim.lsp.enable('omnisharp')
-    vim.lsp.enable('clangd')
-    vim.lsp.enable('rust_analyzer')
-    -- vim.lsp.enable('r_language_server')
-    vim.lsp.enable('bashls')
-    --latex
-    vim.lsp.enable('textlab')
-    -- vim.lsp.enable('digestif')
-    vim.lsp.enable('ltex_plus')
-
-    --latex
-    vim.lsp.config('textlab', {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-    -- vim.lsp.config('digestif', {
-    --   on_attach = on_attach,
-    --   capabilities = capabilities,
-    -- })
-    vim.lsp.config('ltext_plus', {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
+    for _, server in ipairs(language_servers) do
+      vim.lsp.enable(server)
+      vim.lsp.config(server, {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      })
+    end
     -- docker
-    vim.lsp.config('dockerls',{
-      on_attach = on_attach,
-      capabilities = capabilities,
+    vim.lsp.config("dockerls", {
       filetypes = { "dockerfile", "docker-compose" },
       root_dir = lspconfig.util.root_pattern("Dockerfile", "docker-compose.yml"),
     })
-    vim.lsp.config('docker_compose_language_service',{
-      on_attach = on_attach,
-      capabilities = capabilities,
+    vim.lsp.config("docker_compose_language_service", {
       filetypes = { "docker-compose" },
       root_dir = lspconfig.util.root_pattern("docker-compose.yml"),
     })
-    vim.lsp.config('docker_language_service',{
-      on_attach = on_attach,
-      capabilities = capabilities,
+    vim.lsp.config("docker_language_service", {
       filetypes = { "dockerfile" },
       root_dir = lspconfig.util.root_pattern("Dockerfile"),
     })
     -- lua
-    vim.lsp.config('lua_ls',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
+    vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
           diagnostics = {
             globals = { "vim" },
           },
         },
-      }
+      },
     })
-    -- nix
-    vim.lsp.config('nil_ls',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    -- web-dev stuffs
-    vim.lsp.config('eslint',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    vim.lsp.config('eslint_d',{
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
-    vim.lsp.config('html',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    vim.lsp.config('cssls',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    vim.lsp.config('dartls',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-      filetypes = { 'dart' },
+    vim.lsp.config("dartls", {
+      filetypes = { "dart" },
       cmd = { "dart", "language-server", "--protocol=lsp" },
       init_options = {
         {
@@ -117,92 +80,54 @@ return {
           flutterOutline = true,
           onlyAnalyzeProjectsWithOpenFiles = true,
           outline = true,
-          suggestFromUnimportedLibraries = true
-        }
+          suggestFromUnimportedLibraries = true,
+        },
       },
       root_markers = { "pubspec.yaml" },
       settings = {
         dart = {
           completeFunctionCalls = true,
-          showTodos = true
-        }
-      }
+          showTodos = true,
+        },
+      },
     })
-    vim.lsp.config('vue_ls',{
-      on_attach = on_attach,
-      capabilities = capabilities,
-      filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+    vim.lsp.config("vue_ls", {
+      filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
       init_options = {
         vue = {
           hybridMode = false,
         },
         typescript = {
-          tsdk = 'node_modules/typescript/lib',
+          tsdk = "node_modules/typescript/lib",
         },
       },
       on_new_config = function(new_config, new_root_dir)
-        local lib_path = vim.fs.find('node_modules/typescript/lib', { path = new_root_dir, upward = true })[1]
+        local lib_path = vim.fs.find("node_modules/typescript/lib", { path = new_root_dir, upward = true })[1]
         if lib_path then
           new_config.init_options.typescript.tsdk = lib_path
         end
-      end
+      end,
     })
-    vim.lsp.config('phpactor',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    vim.lsp.config('intelephense',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    vim.lsp.config('sqls',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    	cmd = { "sqls" },
-    	filetypes = { "sql", "mysql", "pgsql", "sqlite" },
-    	settings = {
-    	  sqls = {
-    	    connections = {
-    	      {
-    	      	driver = "mysql",
-    	      	-- dataSourceName = "root:root@tcp(127.0.0.1:13306)/world",
-    	      },
-    	      --[[ {
+    vim.lsp.config("sqls", {
+      cmd = { "sqls" },
+      filetypes = { "sql", "mysql", "pgsql", "sqlite" },
+      settings = {
+        sqls = {
+          connections = {
+            {
+              driver = "mysql",
+              -- dataSourceName = "root:root@tcp(127.0.0.1:13306)/world",
+            },
+            --[[ {
     	      	driver = "postgresql",
     	      	dataSourceName = "host=127.0.0.1 port=15432 user=postgres password=mysecretpassword1234 dbname=dvdrental sslmode=disable",
     	      }, ]]
-    	    },
-    	  },
-    	},
+          },
+        },
+      },
     })
-    -- c# stuff
-    vim.lsp.config('csharp_ls',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    vim.lsp.config('omnisharp',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    -- c and c++ stuff
-    vim.lsp.config('clangd',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    -- rust
-    vim.lsp.config('rust_analyzer',{
-    	on_attach = on_attach,
-    	capabilities = capabilities,
-    })
-    -- r
-    -- vim.lsp.config('r_language_server',{
-    --   on_attach = on_attach,
-    --   capabilities = capabilities,
-    -- })
     -- scripting
-    vim.lsp.config('bashls',{
-      on_attach = on_attach,
-      capabilities = capabilities,
+    vim.lsp.config("bashls", {
       settings = {
         bashIde = {
           enable = true,
@@ -212,7 +137,7 @@ return {
         },
       },
     })
-    
+
     vim.diagnostic.enable()
     vim.diagnostic.config({
       virtual_text = true,
@@ -229,5 +154,5 @@ return {
         prefix = "",
       },
     })
-  end
+  end,
 }
