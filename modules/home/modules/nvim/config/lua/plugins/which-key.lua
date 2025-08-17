@@ -27,6 +27,10 @@ return {
       { "<leader>tf", desc = "Floating Terminal", mode = "n" },
       { "<leader>tv", desc = "Vertical Terminal", mode = "n" },
       { "<leader>th", desc = "Horizontal Terminal", mode = "n" },
+      --showkeys
+      { "<leader>kt", desc = "Show Keys", mode = "n" },
+      --alpha
+      { "<leader>hp", desc = "Alpha Dashboard", mode = "n" },
       --others
       { "<leader>w", proxy = "<c-w>", group = "windows" }, -- proxy to window mappings
       { "<leader>b", group = "buffers", expand = function()

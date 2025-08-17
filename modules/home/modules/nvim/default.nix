@@ -60,6 +60,7 @@ in
     typescript-language-server
     vscode-langservers-extracted
     vue-language-server
+    vtsls
     # formatters
     # nodePackages.prettier
     # phpPackages.php-cs-fixer

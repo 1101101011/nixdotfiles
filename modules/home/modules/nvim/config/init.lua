@@ -18,6 +18,7 @@ end
 
 load_modules("plugins")
 require("options").setup()
+require("keybinds").setup()
 
 require("nvim-treesitter.configs").setup({
   -- ensure_installed = "blade",

@@ -9,6 +9,5 @@ return {
         border = "rounded",
       },
     })
-    vim.keymap.set("n", "<Leader>sk", ":ShowkeysToggle<CR>", {})
   end
 }

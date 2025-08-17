@@ -27,6 +27,7 @@ return {
       "cssls",
       "dartls",
       "vue_ls",
+      "vtsls",
       --"phpactor", -- not working
       "intelephense",
       "sqls",
