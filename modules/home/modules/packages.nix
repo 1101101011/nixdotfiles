@@ -33,7 +33,7 @@ in
     inputs.zen-browser.packages."${system}".default
     kitty
     laravel
-    texliveFull
+    # texliveFull
     libreoffice-still
     # mangohud
     nautilus
@@ -42,9 +42,10 @@ in
     protonup-ng
     qbittorrent
     qview
-    retroarchCustom
+    # retroarchCustom
     rofi-wayland
     # tetrio-desktop
+    # cargo-tauri
     vlc
     wl-clipboard
     # zoom-us

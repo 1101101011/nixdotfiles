@@ -1,4 +1,11 @@
-{ config, lib, pkgs, inputs, host, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  host,
+  ...
+}:
 {
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -10,25 +17,40 @@
     dhcpcd.enable = false;
     useDHCP = false;
     networkmanager = {
+      dns = "none";
       enable = true;
       wifi.powersave = true;
     };
     interfaces = {
       wlp3s0 = {
-	useDHCP = false;
-        ipv4.addresses = [{
-          address = "192.168.1.69";
-          prefixLength = 24;
-	}];
+        useDHCP = false;
+        ipv4.addresses = [
+          {
+            address = "192.168.1.69";
+            prefixLength = 24;
+          }
+        ];
       };
     };
     firewall = {
       enable = true;
       allowPing = true;
-      allowedTCPPorts = [ 22 80 443 5432 3306 5050 ];
+      allowedTCPPorts = [
+        22
+        80
+        443
+        5432
+        3306
+        5050
+      ];
       # allowedUDPPorts = [ ... ];
     };
     defaultGateway = "192.168.1.1";
-    nameservers = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" "8.8.4.4"];
+    nameservers = [
+      "1.1.1.1"
+      "1.0.0.1"
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
   };
 }

@@ -69,7 +69,7 @@ in
     nerd-fonts.iosevka-term
     nerd-fonts.iosevka-term-slab
     nerd-fonts.jetbrains-mono
-    nerd-fonts.lekton
+    /* nerd-fonts.lekton
     nerd-fonts.liberation
     nerd-fonts.lilex
     nerd-fonts.martian-mono
@@ -90,7 +90,7 @@ in
     nerd-fonts.space-mono
     nerd-fonts.symbols-only
     nerd-fonts.terminess-ttf
-    nerd-fonts.victor-mono
+    nerd-fonts.victor-mono */
     nerd-fonts.zed-mono
   ];
 }

@@ -36,7 +36,6 @@
     gtk4
     gum
     jq
-    # kitty
     lazygit
     libgcc
     lm_sensors
@@ -58,7 +57,7 @@
     slurp
     socat
     stress-ng
-    # superfile
+    superfile
     tree
     tmux
     tlp
