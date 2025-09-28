@@ -1,6 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 {
   imports = [
+    ./tlp.nix
     ./udev.nix 
     ./audio-drivers.nix
   ];
