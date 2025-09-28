@@ -26,6 +26,10 @@
       url = "github:hat0uma/csvview.nvim";
       flake = false;
     };
+    google-sans = {
+      url = "github:hprobotic/Google-Sans-Font";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: 

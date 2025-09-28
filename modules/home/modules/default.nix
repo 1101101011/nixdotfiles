@@ -6,7 +6,7 @@
     ./fonts
     ./git.nix
     ./gtk.nix
-    ./helix.nix
+    # ./helix.nix
     ./hypr.nix
     ./nvim
     ./packages.nix

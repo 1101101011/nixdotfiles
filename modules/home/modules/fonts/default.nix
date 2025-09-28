@@ -2,30 +2,16 @@
 let
   productSans = pkgs.stdenv.mkDerivation {
     name = "google-sans";
-    src = pkgs.fetchFromGitHub {
-      owner = "hprobotic";
-      repo = "Google-Sans-Font";
-      rev = "master";
-      sha256 = "1q1cc1gh3kaphkxqig3f4wng538drx6xp43scfvy7vzn8s14mdzk";
-    };
+    src = inputs.google-sans;
     installPhase = ''
       mkdir -p $out/share/fonts/product-sans
       cp -v $src/*.ttf $out/share/fonts/product-sans/
     '';
   };
-  # manicDepressive = pkgs.stdenv.mkDerivation {
-  #   name = "custom-font";
-  #   src = ./fonts; 
-  #   installPhase = ''
-  #     mkdir -p $out/share/fonts/manic-depressive
-  #     cp $src/manic-depressive.ttf $out/share/fonts/manic-depressive/
-  #   '';
-  # };
 in
 {
   home.packages = with pkgs; [
     productSans
-    # manicDepressive
     fantasque-sans-mono
     jetbrains-mono
     source-han-sans

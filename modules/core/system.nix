@@ -60,7 +60,6 @@
     superfile
     tree
     tmux
-    tlp
     udiskie
     udisks
     unzip

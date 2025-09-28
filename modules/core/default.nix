@@ -12,6 +12,7 @@
     ./user.nix
     ./vm.nix
     ./services
+    ./tlp.nix
     ./wayland.nix
   ];
 }
