@@ -18,7 +18,6 @@
         '';
         destination = "/etc/udev/rules.d/60-power.rules";
       })
-      pkgs.android-udev-rules
     ];
   };
 }

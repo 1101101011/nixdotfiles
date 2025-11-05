@@ -30,7 +30,7 @@
     glib
     grimblast
     grim
-    go-upower-notify
+    upower-notify
     gtk2
     gtk3
     gtk4
@@ -41,7 +41,7 @@
     lm_sensors
     lsd
     meson
-    mpc-cli
+    mpc
     nix-prefetch-git
     nodejs_24
     openssl

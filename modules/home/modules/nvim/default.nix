@@ -32,7 +32,7 @@ in
     # flutter329
     docker-compose-language-service
     docker-language-server
-    dockerfile-language-server-nodejs
+    dockerfile-language-server
     intelephense
     lua-language-server
     nil

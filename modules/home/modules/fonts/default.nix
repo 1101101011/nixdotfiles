@@ -22,7 +22,7 @@ in
     migu
     montserrat
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     source-han-code-jp
