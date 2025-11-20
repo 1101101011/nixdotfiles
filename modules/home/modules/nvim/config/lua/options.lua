@@ -12,7 +12,7 @@ return {
     vim.o.foldmethod = 'manual';
     -- vim.o.foldexpr = 'nvim_treesitter#foldexpr()';
     vim.o.foldlevel = 99;
-    vim.o.undofile = true;
+    -- vim.o.undofile = true;
     vim.o.foldenable = true;
     vim.o.foldcolumn = '1';
     vim.cmd("set laststatus=3")

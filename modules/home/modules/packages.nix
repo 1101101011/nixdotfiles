@@ -19,6 +19,7 @@ in
 {
   home.packages = with pkgs; [
     # aseprite
+    anydesk
     awscli2
     bat
     # blender
@@ -48,6 +49,7 @@ in
     # cargo-tauri
     vlc
     wl-clipboard
+    zenmap
     zoom-us
   ];
 }
