@@ -10,7 +10,7 @@
     ./steam.nix
     ./system.nix
     ./user.nix
-    ./vm.nix
+    # ./vm.nix
     ./services
     ./wayland.nix
   ];

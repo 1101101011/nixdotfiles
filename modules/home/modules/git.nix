@@ -10,9 +10,11 @@
     # git-credential-oauth.enable = true;
     git = {
       enable = true;
-      userName = "1101101011";
-      userEmail = "ilardecharles@gmail.com";
-      extraConfig = {
+      settings = {
+        user = {
+          name = "1101101011";
+          email = "ilardecharles@gmail.com";
+        };
         init.defaultBranch = "main";
         pull.rebase = true;
         credential.helper = "oauth";

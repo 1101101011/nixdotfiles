@@ -19,11 +19,12 @@ in
 {
   home.packages = with pkgs; [
     # aseprite
-    anydesk
-    awscli2
+    # anydesk
+    # awscli2
     bat
     # blender
     brave
+    cheese
     discord
     eww
     fastfetch
@@ -31,7 +32,7 @@ in
     # gimp
     hypridle
     hyprpaper
-    inputs.zen-browser.packages."${system}".default
+    inputs.zen-browser.packages."${stdenv.hostPlatform.system}".default
     kitty
     laravel
     texliveFull
@@ -41,7 +42,7 @@ in
     nitch
     obs-studio
     protonup-ng
-    qbittorrent
+    # qbittorrent
     qview
     # retroarchCustom
     rofi
@@ -49,7 +50,10 @@ in
     # cargo-tauri
     vlc
     wl-clipboard
-    zenmap
-    zoom-us
+    # zenmap
+    # zoom-us
+    ghidra
+    detect-it-easy
+    zed-editor
   ];
 }
