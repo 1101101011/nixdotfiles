@@ -7,15 +7,15 @@
   ...
 }:
 {
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking = {
     # Configure network proxy if necessary
     # proxy.default = "http://user:password@proxy:port/";
     # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
     hostName = "${host}";
     dhcpcd.enable = false;
+    # useNetworkd = true;
     useDHCP = false;
+    wireless.enable = false;
     networkmanager = {
       dns = "none";
       enable = true;

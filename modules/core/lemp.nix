@@ -118,7 +118,7 @@
         date.timezone = "Asia/Manila"
       '';
     };
-    mysql = {
+    /* mysql = {
       enable = true;
       package = pkgs.mariadb;
       dataDir = "/var/lib/mysql";
@@ -136,7 +136,7 @@
           # general_log_file = "/var/log/mariadb/general_query.log";
         };
       };
-    };
+    }; */
     postgresql = {
       enable = true;
       enableTCPIP = true;
