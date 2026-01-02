@@ -45,7 +45,7 @@ This repository contains my personal NixOS configuration files, which are used t
 > The only system that is currently available is `Kurohikari`.
 > The other systems are work in progress and will be available soon.
 
-List of Systems Configured in this flakes:
+List of Systems Configured in these flakes:
 | System 	   | Architecture                   	| Description                               	|
 |-----------   |--------------------------------	|-------------------------------------------	|
 | 💻 Kurohikari| `x86_64-linux`                 	| ThinkPad T480 laptop, for development.    	|
@@ -113,12 +113,13 @@ Step 4: Run the Installation Script
 ## Roadmap
 - [X] Merge the `home-manager` standalone module into the `nixos` module.
 - [X] Create an installation script to automate the `nixos` setup process.
+- [ ] Make the `nixos` configuration more modular, dynamic and reusable based on the host.
 - [ ] Update the nvim configuration to use the latest plugins and features.
+- [ ] Add more documentation and examples for users to understand the configuration.
+## For Dotfiles repository
 - [ ] Integrate hyprland configuration into the `nixos` module.
 - [ ] Switch from using EWW into Quickshell for more advanced widgets.
 - [ ] Make a dyanamic theme switcher for Hyprland and other applications.
-- [ ] Make the `nixos` configuration more modular, dynamic and reusable based on the host.
-- [ ] Add more documentation and examples for users to understand the configuration.
 
 ## Contributing
 
