@@ -15,7 +15,7 @@
     dhcpcd.enable = false;
     # useNetworkd = true;
     useDHCP = false;
-    wireless.enable = false;
+    # wireless.enable = false;
     networkmanager = {
       dns = "none";
       enable = true;
