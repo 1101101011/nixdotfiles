@@ -6,28 +6,33 @@
   ...
 }:
 {
-  home.sessionVariables.GTK_THEME = "Gruvbox-Dark";
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.capitaine-cursors-themed;
-    name = "Capitaine Cursors (Gruvbox)";
-    size = 16;
+  options = {
+    myGtk.enable = lib.mkEnableOption "Enable GTK theming and configuration";
   };
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.gruvbox-gtk-theme;
-      name = "Gruvbox-Dark";
+  config = lib.mkIf config.myGtk.enable {
+    home.sessionVariables.GTK_THEME = "Gruvbox-Dark";
+    home.pointerCursor = {
+      gtk.enable = true;
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors (Gruvbox)";
+      size = 16;
     };
-    iconTheme = {
-      package = pkgs.gruvbox-plus-icons.override {
-        folder-color = "blue";
+    gtk = {
+      enable = true;
+      theme = {
+        package = pkgs.gruvbox-gtk-theme;
+        name = "Gruvbox-Dark";
       };
-      name = "Gruvbox-Plus-Dark";
-    };
-    font = {
-      name = "JetBrains Mono";
-      size = 11;
+      iconTheme = {
+        name = "Gruvbox-Plus-Dark";
+        package = pkgs.gruvbox-plus-icons.override {
+          folder-color = "blue";
+        };
+      };
+      font = {
+        name = "JetBrains Mono";
+        size = 11;
+      };
     };
   };
 }

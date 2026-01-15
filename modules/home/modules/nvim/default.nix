@@ -22,14 +22,9 @@ let
 in
 {
   home.packages = with pkgs; [
-    # lsp
-    # cargo
-    # vtsls
     bash-language-server
     clang-tools
     csharp-ls
-    # dart
-    # flutter329
     docker-compose-language-service
     docker-language-server
     dockerfile-language-server
@@ -38,20 +33,7 @@ in
     nil
     omnisharp-roslyn
     phpactor
-    # (rWrapper.override {
-    #   packages = with rPackages; [ 
-    #     dplyr
-    #     formatR
-    #     ggplot2
-    #     languageserver 
-    #     lintr
-    #     readxl
-    #     styler
-    #     writexl
-    #     xlsx
-    #   ];
-    # })
-    # rust-analyzer
+    rust-analyzer
     sqls
     textidote
     # digestif
@@ -73,7 +55,7 @@ in
     prettierd
     shellcheck
     shfmt
-    sqlfluff
+    # sqlfluff
     stylua
     # debuggers
     # lldb_19
@@ -91,6 +73,7 @@ in
       # flutter-tools-nvim
       which-key-nvim
       mini-nvim
+      snacks-nvim
       telescope-nvim
       nvim-web-devicons
       telescope-ui-select-nvim
@@ -119,7 +102,7 @@ in
       copilot-vim
       cord-nvim
       nvim-treesitter.withAllGrammars
-      (nvim-treesitter.withPlugins (_:
+      /* (nvim-treesitter.withPlugins (_:
         nvim-treesitter.allGrammars
         ++ [
           (pkgs.tree-sitter.buildGrammar {
@@ -133,7 +116,7 @@ in
             };
           })
         ]
-      ))
+      )) */
       showkeys-nvim
       csv-view-nvim
     ];

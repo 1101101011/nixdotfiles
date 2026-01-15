@@ -41,6 +41,7 @@ in
     nautilus
     nitch
     obs-studio
+    pixieditor
     protonup-ng
     # qbittorrent
     qview
@@ -52,8 +53,6 @@ in
     wl-clipboard
     # zenmap
     # zoom-us
-    ghidra
-    detect-it-easy
     zed-editor
   ];
 }

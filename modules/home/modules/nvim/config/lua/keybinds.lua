@@ -9,5 +9,6 @@ return {
     vim.keymap.set("n", "<leader>hp", "<CMD>Alpha<CR>", {})
     --Showkeys
     vim.keymap.set("n", "<Leader>kt", "<CMD>ShowkeysToggle<CR>", {})
+    vim.keymap.set("n", "<Leader>cst", "<CMD>CsvViewToggle<CR>", {})
   end
 }

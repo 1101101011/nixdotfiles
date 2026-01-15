@@ -19,18 +19,4 @@
     ./services
     ./wayland.nix
   ];
-
-  config = lib.mkMerge [
-    (lib.mkIf (host == "Kuroha") {
-      steam.enable = true;
-      vm.enable = true;
-      wayland.enable = true;
-    })
-
-    (lib.mkIf (host == "Kurohikari") {
-      steam.enable = true;
-      vm.enable = false;
-      wayland.enable = true;
-    })
-  ];
 }

@@ -17,32 +17,22 @@ local function load_modules(dir)
 end
 
 load_modules("plugins")
+load_modules("native")
 require("options").setup()
 require("keybinds").setup()
 
-require("nvim-treesitter.configs").setup({
-  -- ensure_installed = "blade",
+--[[ vim.filetype.add({
+  pattern = {
+    [".*%.blade%.php"] = "blade",
+  },
+})
+
+local treesitter = require("nvim-treesitter")
+treesitter.setup({
   highlight = {
     enable = true,
   },
   injections = {
     enable = true,
   },
-})
-
-local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-parser_config.blade = {
-  install_info = {
-    url = "https://github.com/EmranMR/tree-sitter-blade",
-    files = { "src/parser.c" },
-    branch = "main",
-  },
-  filetype = "blade",
-}
-
-vim.filetype.add({
-  pattern = {
-    [".*%.blade%.php"] = "blade",
-  },
-})
-
+}) ]]
