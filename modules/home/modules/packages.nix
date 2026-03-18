@@ -19,7 +19,7 @@ in
 {
   home.packages = with pkgs; [
     # aseprite
-    # anydesk
+    anydesk
     # awscli2
     bat
     # blender
@@ -53,6 +53,8 @@ in
     wl-clipboard
     # zenmap
     # zoom-us
+    # ghidra
+    # detect-it-easy
     zed-editor
   ];
 }

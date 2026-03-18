@@ -34,6 +34,8 @@ return {
     vim.cmd [[
       highlight clear SignColumn
       highlight SignColumn guibg=CLEAR
+      highlight clear FoldColumn
+      highlight FoldColumn guibg=CLEAR
     ]]
     vim.opt.fillchars = { eob = " " }
   end

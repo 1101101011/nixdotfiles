@@ -19,9 +19,9 @@
 
     #core stuff
     steam.enable = true;
-    vm.enable = false;
+    vm.enable = true;
     wayland.enable = true;
-    lemp.enable = true;
+    lemp.enable = false;
     #home-manager stuff
   };
 }

@@ -104,6 +104,22 @@ return {
       vtsls = {},
       ltex_plus = {},
       textlab = {},
+      csharp_ls = {},
+      omnisharp = {
+        cmd = { "OmniSharp", "--languageserver" },
+        filetypes = { "cs" },
+        FormattingOptions = {
+          enableEditorConfigSupport = true,
+          enable_roslyn_analyzers = true,
+          organize_imports_on_format = true,
+        },
+        --[[ handlers = {
+          ["textDocument/definition"] = require('omnisharp_extended').definition_handler,
+          ["textDocument/typeDefinition"] = require('omnisharp_extended').type_definition_handler,
+          ["textDocument/references"] = require('omnisharp_extended').references_handler,
+          ["textDocument/implementation"] = require('omnisharp_extended').implementation_handler,
+        }, ]]
+      },
     }
 
     for server, config in pairs(servers) do

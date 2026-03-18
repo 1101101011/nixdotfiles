@@ -43,7 +43,7 @@
     meson
     mpc
     nix-prefetch-git
-    nodejs_24
+    # nodejs_25
     openssl
     pfetch-rs
     playerctl

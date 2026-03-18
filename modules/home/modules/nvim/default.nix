@@ -23,44 +23,57 @@ in
 {
   home.packages = with pkgs; [
     bash-language-server
-    clang-tools
+    /* clang-tools
     csharp-ls
+    omnisharp-roslyn */
     docker-compose-language-service
     docker-language-server
     dockerfile-language-server
-    intelephense
     lua-language-server
     nil
-    omnisharp-roslyn
-    phpactor
+    /* 
     rust-analyzer
     sqls
     textidote
-    # digestif
+    digestif
     ltex-ls-plus
-    texlab
+    texlab */
     typescript-language-server
     vscode-langservers-extracted
     vue-language-server
     vtsls
-    # formatters
-    # nodePackages.prettier
-    # phpPackages.php-cs-fixer
+    /* formatters
+    nodePackages.prettier
+    phpPackages.php-cs-fixer */
     alejandra
     blade-formatter
-    csharpier
+    /* csharpier
     eslint
     eslint_d
     hadolint
-    prettierd
+    prettierd */
     shellcheck
     shfmt
-    # sqlfluff
     stylua
-    # debuggers
-    # lldb_19
-    # gdb
-    # netcoredbg
+    /* sqlfluff
+    debuggers
+    lldb_19
+    gdb
+    netcoredbg */
+    /* Nodejs
+    nodePackages.prettier
+    eslint
+    eslint_d
+    prettierd
+    typescript-language-server
+    vscode-langservers-extracted
+    vue-language-server
+    vstsls */
+    /* PHP
+    phpactor
+    phpPackages.php-cs-fixer
+    intelephense */
+
   ];
 
   programs.neovim = {
@@ -68,7 +81,8 @@ in
     plugins = with pkgs.vimPlugins; [
       alpha-nvim
       indent-blankline-nvim
-      gruvbox-material
+      # gruvbox-material
+      gruvbox-nvim
       comment-nvim
       # flutter-tools-nvim
       which-key-nvim

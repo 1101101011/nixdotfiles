@@ -141,6 +141,7 @@
         };
       }; */
       postgresql = {
+        package = pkgs.postgresql_18;
         enable = true;
         enableTCPIP = true;
         settings.port = 5432;

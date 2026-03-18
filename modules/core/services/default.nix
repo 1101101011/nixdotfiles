@@ -9,6 +9,7 @@
     ./tlp.nix
     ./udev.nix
     ./audio-drivers.nix
+    ./github-runners.nix
   ];
 
   config = lib.mkMerge [
@@ -30,6 +31,10 @@
       services = {
         displayManager.ly = {
           enable = true;
+          settings = {
+            load = true;
+            save = true;
+          };
         };
         openssh.enable = true;
         devmon.enable = true;
