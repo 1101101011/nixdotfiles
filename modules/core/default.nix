@@ -18,5 +18,6 @@
     ./vm.nix
     ./services
     ./wayland.nix
+    ./nix-ld.nix
   ];
 }
