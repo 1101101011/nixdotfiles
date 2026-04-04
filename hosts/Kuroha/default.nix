@@ -19,6 +19,6 @@
     steam.enable = true;
     vm.enable = true;
     wayland.enable = true;
-    lemp.enable = true;
+    # lemp.enable = true;
   };
 }

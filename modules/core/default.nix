@@ -9,7 +9,7 @@
     ./boot.nix
     ./hardware.nix
     ./home-manager.nix
-    ./lemp.nix
+    ./lemp
     ./locale.nix
     ./networking.nix
     ./steam.nix
