@@ -11,6 +11,7 @@
     userDirs = {
       enable = true;
       createDirectories = true;
+      setSessionVariables = true;
       desktop = "${config.home.homeDirectory}/Desktop";
       documents = "${config.home.homeDirectory}/Documents";
       download = "${config.home.homeDirectory}/Downloads";
@@ -20,7 +21,7 @@
       templates = "${config.home.homeDirectory}/Templates";
       videos = "${config.home.homeDirectory}/Videos";
       extraConfig = {
-        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshot";
+        SCREENSHOT = "${config.home.homeDirectory}/Pictures/Screenshot";
       };
     };
   };

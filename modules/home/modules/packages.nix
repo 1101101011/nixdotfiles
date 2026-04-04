@@ -1,6 +1,4 @@
 {
-  lib,
-  config,
   pkgs,
   inputs,
   ...
@@ -49,6 +47,7 @@ in
     rofi
     # tetrio-desktop
     # cargo-tauri
+    viber
     vlc
     wl-clipboard
     # zenmap
@@ -56,5 +55,8 @@ in
     # ghidra
     # detect-it-easy
     zed-editor
+    # QUICKSHELL
+    inputs.quickshell.packages."${stdenv.hostPlatform.system}".default
+    qt6.qtwayland
   ];
 }

@@ -1,8 +1,6 @@
 {
   pkgs,
   inputs,
-  config,
-  neovim,
   ...
 }: 
 let
@@ -38,10 +36,10 @@ in
     digestif
     ltex-ls-plus
     texlab */
-    typescript-language-server
+    /* typescript-language-server
     vscode-langservers-extracted
     vue-language-server
-    vtsls
+    vtsls */
     /* formatters
     nodePackages.prettier
     phpPackages.php-cs-fixer */
@@ -73,7 +71,7 @@ in
     phpactor
     phpPackages.php-cs-fixer
     intelephense */
-
+    kdePackages.qtdeclarative
   ];
 
   programs.neovim = {
@@ -81,8 +79,8 @@ in
     plugins = with pkgs.vimPlugins; [
       alpha-nvim
       indent-blankline-nvim
-      # gruvbox-material
-      gruvbox-nvim
+      gruvbox-material
+      # gruvbox-nvim
       comment-nvim
       # flutter-tools-nvim
       which-key-nvim

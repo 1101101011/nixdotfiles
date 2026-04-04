@@ -19,6 +19,10 @@
     };
     gtk = {
       enable = true;
+      gtk4.theme = {
+        package = pkgs.gruvbox-gtk-theme;
+        name = "Gruvbox-Dark";
+      };
       theme = {
         package = pkgs.gruvbox-gtk-theme;
         name = "Gruvbox-Dark";

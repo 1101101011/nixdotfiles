@@ -1,20 +1,19 @@
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = with pkgs; 
-  let
-    php = pkgs.php.buildEnv { 
-      extraConfig = "
-        upload_max_filesize = 2G
-        post_max_size = 3G
-        memory_limit = 2G
-      "; 
-    };
-  in 
-  [
+  environment.systemPackages = with pkgs; [
     alsa-utils
     bc
     btop
@@ -47,11 +46,6 @@
     openssl
     pfetch-rs
     playerctl
-    php
-    php.packages.composer
-    phpExtensions.mysqlnd
-    phpExtensions.mysqli
-    phpExtensions.pdo
     # R
     sass
     slurp
@@ -78,5 +72,5 @@
     ntfs3g
   ];
   # system.copySystemConfiguration = true;
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }

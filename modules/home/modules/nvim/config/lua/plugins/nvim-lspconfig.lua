@@ -93,6 +93,9 @@ return {
           },
         },
       },
+      qmlls = {
+        cmd = {"qmlls", "-E"}
+      },
 
       -- simple servers (no extra config)
       nil_ls = {},
