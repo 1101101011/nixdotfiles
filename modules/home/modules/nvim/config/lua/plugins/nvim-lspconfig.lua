@@ -94,7 +94,7 @@ return {
         },
       },
       qmlls = {
-        cmd = {"qmlls", "-E"}
+        cmd = { "qmlls", "-E" },
       },
 
       -- simple servers (no extra config)
@@ -104,6 +104,7 @@ return {
       clangd = {},
       rust_analyzer = {},
       intelephense = {},
+      phpactor = {},
       vtsls = {},
       ltex_plus = {},
       textlab = {},
@@ -126,8 +127,10 @@ return {
     }
 
     for server, config in pairs(servers) do
+      local merged = vim.tbl_deep_extend("force", default_config, config)
+
+      vim.lsp.config(server, merged)
       vim.lsp.enable(server)
-      vim.lsp.config(server, vim.tbl_deep_extend("force", default_config, config))
     end
 
     vim.diagnostic.config({

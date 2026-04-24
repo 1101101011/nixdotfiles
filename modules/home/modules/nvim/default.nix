@@ -99,6 +99,7 @@ in
       nvim-cmp
       luasnip
       cmp_luasnip
+      diffview-nvim
       friendly-snippets
       cmp-nvim-lsp
       neodev-nvim

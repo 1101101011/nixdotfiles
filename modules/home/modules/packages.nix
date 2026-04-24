@@ -20,6 +20,7 @@ in
     anydesk
     # awscli2
     bat
+    beekeeper-studio
     # blender
     brave
     cheese
@@ -55,7 +56,6 @@ in
     # ghidra
     # detect-it-easy
     zed-editor
-    # QUICKSHELL
     inputs.quickshell.packages."${stdenv.hostPlatform.system}".default
     qt6.qtwayland
   ];

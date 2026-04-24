@@ -12,15 +12,15 @@
 
   config = lib.mkMerge [
     (lib.mkIf (host != "Kagami") {
-      php-fpm.enable = true;
-      nginx.enable = true;
-      postgrs.enable = true;
+      php-fpm.enable = false;
+      nginx.enable = false;
+      postgres.enable = true;
     })
 
     (lib.mkIf (host == "Kagami") {
       php-fpm.enable = false;
       nginx.enable = false;
-      postgrs.enable = false;
+      postgres.enable = false;
     })
   ];
   /*services = {

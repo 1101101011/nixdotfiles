@@ -1,6 +1,7 @@
 {
     "diagnostics.disable": [
-        "redundant-parameter"
+        "redundant-parameter",
+        "unused-local"
     ],
     "diagnostics.globals": [
         "vim",

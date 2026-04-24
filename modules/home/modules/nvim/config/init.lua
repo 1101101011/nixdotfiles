@@ -1,3 +1,5 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 -- Load all modules in lua/
 local function load_modules(dir)
   local files = vim.fn.glob(vim.fn.stdpath("config") .. "/lua/" .. dir .. "/*.lua", true, true)
@@ -18,8 +20,6 @@ end
 
 load_modules("plugins")
 load_modules("native")
-require("options").setup()
-require("keybinds").setup()
 
 --[[ vim.filetype.add({
   pattern = {

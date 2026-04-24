@@ -27,6 +27,7 @@ return {
       { "<leader>tf", desc = "Floating Terminal", mode = "n" },
       { "<leader>tv", desc = "Vertical Terminal", mode = "n" },
       { "<leader>th", desc = "Horizontal Terminal", mode = "n" },
+      { "<leader>td", desc = "Toggle Diagnostics", mode = "n" },
       --showkeys
       { "<leader>kt", desc = "Show Keys", mode = "n" },
       --alpha
@@ -37,6 +38,9 @@ return {
           return require("which-key.extras").expand.buf()
         end
       },
+      { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "Diff View", mode = "n" },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "File History", mode = "n" },
+      { "<leader>gx", "<cmd>DiffviewClose<cr>", desc = "Close Diff", mode = "n" },
     })
   end
 }

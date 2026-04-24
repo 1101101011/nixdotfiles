@@ -30,7 +30,7 @@
         port = 5050;
         openFirewall = true;
         initialEmail = "admin@admin.com";
-        initialPasswordFile = ./secrets/pgadmin_password.txt;
+        initialPasswordFile = ../secrets/pgadmin_password.txt;
         settings = {
           "ALLOWED_HOSTS" = [
             "127.0.0.1"

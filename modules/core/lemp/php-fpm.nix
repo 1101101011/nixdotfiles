@@ -8,7 +8,7 @@
   options = {
     php-fpm.enable = lib.mkEnableOption "Enable PHP-FPM";
   };
-  config = lib.mkIf config.lemp.enable {
+  config = lib.mkIf config.php-fpm.enable {
     services = {
       phpfpm.pools."pupcon" = {
         user = "nginx";
