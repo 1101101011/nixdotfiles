@@ -12,22 +12,16 @@
   ];
 
   config = lib.mkMerge [
-    {
+    (lib.mkIf (host != "Kurohikari") {
       tlp.enable = false;
       udev.enable = false;
       gh-runners.enable = false;
-    }
-
-    /* (lib.mkIf (host != "Kagami") {
-      tlp.enable = false;
-      udev.enable = false;
-      gh-runners.enable = false;
-    }) */
+    })
 
     (lib.mkIf (host == "Kurohikari") {
       tlp.enable = true;
       udev.enable = true;
-      gh-runners.enable = true;
+      gh-runners.enable = false;
     })
     {
       # Enable CUPS to print documents.
