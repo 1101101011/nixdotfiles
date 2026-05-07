@@ -1,10 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  ...
-}:
+{ ... }:
 {
   imports = [
     ./../../modules/core
@@ -12,10 +6,6 @@
   ];
 
   config = {
-    environment.systemPackages = with pkgs; [
-      tlp
-    ];
-
     steam.enable = true;
     vm.enable = true;
     wayland.enable = true;

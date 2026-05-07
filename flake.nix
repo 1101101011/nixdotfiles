@@ -3,7 +3,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager";#/release-25.05";
+      url = "github:nix-community/home-manager"; # /release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     quickshell = {
@@ -36,50 +36,51 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs: 
-  let
-	  username = "Shiroe";
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      ...
+    }@inputs:
+    let
+      username = "Shiroe";
+      system = "x86_64-linux";
+    in
+    {
+      nixosConfigurations = {
+        # Laptop
+        Kurohikari = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            host = "Kurohikari";
+            inherit self inputs username;
+          };
+          modules = [
+            ./hosts/Kurohikari
+          ];
+        };
+        # Desktop
+        Kuroha = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            host = "Kuroha";
+            inherit self inputs username;
+          };
+          modules = [
+            ./hosts/Kuroha
+          ];
+        };
+        # Virtual Machine
+        Kagami = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            host = "Kagami";
+            inherit self inputs username;
+          };
+          modules = [
+            ./hosts/Kagami
+          ];
+        };
+      };
     };
-  in
-  {
-    nixosConfigurations = {
-      # Laptop
-      Kurohikari = nixpkgs.lib.nixosSystem {
-        inherit system;
-	      specialArgs = { 
-	        host = "Kurohikari";
-	        inherit self inputs username; 
-	      };
-        modules = [
-          ./hosts/Kurohikari
-        ];
-      };
-      # Desktop
-      Kuroha = nixpkgs.lib.nixosSystem {
-        inherit system;
-	      specialArgs = { 
-	        host = "Kurohikari";
-	        inherit self inputs username; 
-	      };
-        modules = [
-          ./hosts/Kuroha
-        ];
-      };
-      # Virtual Machine
-      Kagami = nixpkgs.lib.nixosSystem {
-        inherit system;
-	      specialArgs = { 
-	        host = "Kagami";
-	        inherit self inputs username; 
-	      };
-        modules = [
-          ./hosts/Kagami
-        ];
-      };
-    };
-  };
 }

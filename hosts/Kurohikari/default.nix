@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
     ./../../modules/core
@@ -13,15 +8,21 @@
   config = {
     environment.systemPackages = with pkgs; [
       brightnessctl
-      tlp
       acpi
     ];
 
+    networking.interfaces.wlp3s0 = {
+      useDHCP = false;
+      ipv4.addresses = [
+        {
+          address = "192.168.1.69";
+          prefixLength = 24;
+        }
+      ];
+    };
     #core stuff
     steam.enable = true;
     vm.enable = true;
     wayland.enable = true;
-    # lemp.enable = false;
-    #home-manager stuff
   };
 }
