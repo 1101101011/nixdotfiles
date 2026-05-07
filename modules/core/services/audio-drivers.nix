@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ ... }:
 {
   security.rtkit.enable = true;
   services.pipewire = {
@@ -9,7 +9,7 @@
     jack.enable = true;
     wireplumber = {
       enable = true;
-      configPackages = [];
+      configPackages = [ ];
     };
   };
 }

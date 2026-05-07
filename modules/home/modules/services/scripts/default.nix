@@ -9,7 +9,6 @@
       source = ./battery-status.sh;
       executable = true;
     };
-
   };
   systemd.user = {
     services = {
@@ -35,7 +34,7 @@
         OnBootSec = "1m";
       };
       Install = {
-        WantedBy = ["timers.target"];
+        WantedBy = [ "timers.target" ];
       };
     };
   };

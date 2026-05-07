@@ -1,12 +1,16 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  ...
+}:
 {
   options = {
-    tlp.enable = lib.mkEnableOption "Enable TLP for power management"; 
+    tlp.enable = lib.mkEnableOption "Enable TLP for power management";
   };
   config = lib.mkIf config.tlp.enable {
     services.tlp = {
       enable = true;
-        settings = {
+      settings = {
         START_CHARGE_THRESH_BAT0 = 25;
         STOP_CHARGE_THRESH_BAT0 = 90;
         START_CHARGE_THRESH_BAT1 = 25;

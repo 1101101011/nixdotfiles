@@ -1,11 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  host,
-  ...
-}:
+{ host, ... }:
 {
   networking = {
     # Configure network proxy if necessary
@@ -20,17 +13,6 @@
       dns = "none";
       enable = true;
       wifi.powersave = true;
-    };
-    interfaces = {
-      wlp3s0 = {
-        useDHCP = false;
-        ipv4.addresses = [
-          {
-            address = "192.168.1.69";
-            prefixLength = 24;
-          }
-        ];
-      };
     };
     firewall = {
       enable = true;

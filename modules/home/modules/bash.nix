@@ -1,17 +1,13 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
-}:
+{ ... }:
 {
   programs.bash = {
     enable = true;
+    shellAliases = {
+      ls = "lsd";
+      tree = "lsd --tree";
+    };
     bashrcExtra = ''
-      nitch
-      alias ls='lsd'
-      alias tree='lsd --tree'
+      [[ -z "$TMUX" ]] && nitch
     '';
     enableCompletion = true;
   };

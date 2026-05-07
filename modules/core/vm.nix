@@ -1,4 +1,9 @@
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   options = {
     vm.enable = lib.mkEnableOption "Enable Virtualization and VM management tools";
@@ -8,7 +13,7 @@
     environment.systemPackages = with pkgs; [
       virt-manager
       virt-viewer
-      spice 
+      spice
       spice-gtk
       spice-protocol
       virtio-win

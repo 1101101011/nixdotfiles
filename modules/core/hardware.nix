@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   hardware = {
     opentabletdriver = {
@@ -23,4 +23,3 @@
     };
   };
 }
-

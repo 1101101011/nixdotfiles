@@ -1,9 +1,4 @@
-{
-  host,
-  config,
-  lib,
-  ...
-}:
+{ ... }:
 {
   imports = [
     ./boot.nix
