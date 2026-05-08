@@ -13,14 +13,12 @@ battery_state=$1
 
 # Check battery status
 case "$battery_state" in
-"Charging")
-  battery_status="Charging"
-  battery_icon="battery-100-charged"
-  ;;
-"Discharging")
-  battery_status="Discharging"
-  battery_icon="battery-100"
-  ;;
+  "Charging") 
+    battery_status="Charging" 
+    battery_icon="battery-100-charged" ;;
+  "Discharging")
+    battery_status="Discharging" 
+    battery_icon="battery-100" ;;
 esac
 
 # Iterate over all batteries (e.g., BAT0, BAT1)
@@ -39,7 +37,7 @@ done
 
 # Calculate total percentage
 if [ "$sum_energy_full" -gt 0 ]; then
-  total_percent=$(((sum_energy_now * 100) / sum_energy_full))
+  total_percent=$(( (sum_energy_now * 100) / sum_energy_full ))
 else
   /run/current-system/sw/bin/notify-send "Battery: Not detected" "Battery is not detected." -i "battery-missing" -r 9991
 fi

@@ -1,7 +1,5 @@
 {
-  config,
   lib,
-  pkgs,
   inputs,
   username,
   host,
@@ -24,23 +22,29 @@
           home.homeDirectory = "/home/${username}";
           home.stateVersion = "26.05";
           programs.home-manager.enable = true;
+
+          myDunst.enable = true;
+          myFonts.enable = true;
+          myGtk.enable = true;
+          myHypr.enable = true;
+          myService.enable = true;
         }
 
-        (lib.mkIf (host == "Kagami") {
+        /* (lib.mkIf (host == "Kurohikari") {
           myDunst.enable = true;
           myFonts.enable = true;
           myGtk.enable = true;
           myHypr.enable = true;
-          myServices.enable = true;
-        })
+          myService.enable = true;
+        }) */
 
-        (lib.mkIf (host != "Kagami") {
+        /* (lib.mkIf (host != "Kurohikari") {
           myDunst.enable = true;
           myFonts.enable = true;
           myGtk.enable = true;
           myHypr.enable = true;
-          myServices.enable = true;
-        })
+          myService.enable = true;
+        }) */
       ];
     };
   };
