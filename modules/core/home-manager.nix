@@ -28,6 +28,7 @@
           myGtk.enable = true;
           myHypr.enable = true;
           myService.enable = true;
+          kube-home.enable = true;
         }
 
         /* (lib.mkIf (host == "Kurohikari") {

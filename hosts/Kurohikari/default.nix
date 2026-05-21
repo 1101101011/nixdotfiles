@@ -24,5 +24,6 @@
     steam.enable = true;
     vm.enable = true;
     wayland.enable = true;
+    kube.enable = true;
   };
 }

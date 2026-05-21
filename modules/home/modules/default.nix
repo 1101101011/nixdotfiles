@@ -9,6 +9,7 @@
     # ./helix.nix
     ./hypr.nix
     ./nvim
+    ./kubernetes
     ./packages.nix
     ./services
     ./spicetify.nix

@@ -55,7 +55,6 @@
     vim
     vulkan-tools
     wf-recorder
-    wget
     wirelesstools
     xdg-utils
     xplr
@@ -64,7 +63,21 @@
     ### hyprland
     libnotify
     ntfs3g
+    ## ----
+    curl
+    wget
+    gnutar
+    gzip
   ];
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      zlib
+      openssl
+      stdenv.cc.cc
+    ];
+  };
   # system.copySystemConfiguration = true;
   system.stateVersion = "26.05";
 }

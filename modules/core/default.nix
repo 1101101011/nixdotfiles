@@ -13,5 +13,6 @@
     ./vm.nix
     ./services
     ./wayland.nix
+    ./kubernetes
   ];
 }

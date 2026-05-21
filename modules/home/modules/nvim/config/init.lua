@@ -21,7 +21,7 @@ end
 load_modules("plugins")
 load_modules("native")
 
---[[ vim.filetype.add({
+vim.filetype.add({
   pattern = {
     [".*%.blade%.php"] = "blade",
   },
@@ -35,4 +35,4 @@ treesitter.setup({
   injections = {
     enable = true,
   },
-}) ]]
+})

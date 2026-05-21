@@ -114,8 +114,8 @@ in
       lualine-nvim
       copilot-vim
       cord-nvim
-      nvim-treesitter.withAllGrammars
-      /* (nvim-treesitter.withPlugins (_:
+      # nvim-treesitter.withAllGrammars
+      (nvim-treesitter.withPlugins (_:
         nvim-treesitter.allGrammars
         ++ [
           (pkgs.tree-sitter.buildGrammar {
@@ -129,7 +129,7 @@ in
             };
           })
         ]
-      )) */
+      ))
       showkeys-nvim
       csv-view-nvim
     ];

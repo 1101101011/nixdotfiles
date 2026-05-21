@@ -18,7 +18,6 @@ in
   home.packages = with pkgs; [
     # aseprite
     anydesk
-    # awscli2
     bat
     beekeeper-studio
     # blender

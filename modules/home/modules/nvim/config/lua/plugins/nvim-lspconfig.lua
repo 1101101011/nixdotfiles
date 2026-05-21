@@ -124,6 +124,11 @@ return {
           ["textDocument/implementation"] = require('omnisharp_extended').implementation_handler,
         }, ]]
       },
+      tofu_ls = {
+        cmd = { "tofu-ls", "serve" },
+        filetypes = { "opentofu", "opentofu-vars", "terraform", "terraform-vars" },
+        root_markers = { ".terraform", ".git", "*.tf" },
+      },
     }
 
     for server, config in pairs(servers) do
