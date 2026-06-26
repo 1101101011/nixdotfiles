@@ -37,6 +37,8 @@ in
     libreoffice-still
     # mangohud
     nautilus
+    # nufraw
+    # nufraw-thumbnailer
     nitch
     obs-studio
     pixieditor
@@ -47,7 +49,7 @@ in
     rofi
     # tetrio-desktop
     # cargo-tauri
-    viber
+    # viber
     vlc
     wl-clipboard
     # zenmap
