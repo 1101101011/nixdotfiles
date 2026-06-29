@@ -17,7 +17,7 @@ in
 {
   home.packages = with pkgs; [
     # aseprite
-    anydesk
+    # anydesk
     bat
     beekeeper-studio
     # blender
