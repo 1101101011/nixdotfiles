@@ -15,6 +15,7 @@
       drivers = with pkgs; [
         epson-escpr
         epson-escpr2
+        epson-201401w
       ];
     };
   };
