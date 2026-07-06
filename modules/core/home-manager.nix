@@ -27,7 +27,6 @@
           myFonts.enable = true;
           myGtk.enable = true;
           myHypr.enable = true;
-          myService.enable = true;
           kube-home.enable = true;
         }
 
@@ -39,13 +38,9 @@
           myService.enable = true;
         }) */
 
-        /* (lib.mkIf (host != "Kurohikari") {
-          myDunst.enable = true;
-          myFonts.enable = true;
-          myGtk.enable = true;
-          myHypr.enable = true;
-          myService.enable = true;
-        }) */
+        (lib.mkIf (host != "Kurohikari") {
+          myService.enable = false;
+        })
       ];
     };
   };

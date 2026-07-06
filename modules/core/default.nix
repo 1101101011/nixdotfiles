@@ -7,6 +7,7 @@
     ./lemp
     ./locale.nix
     ./networking.nix
+    ./printers
     ./steam.nix
     ./system.nix
     ./user.nix
