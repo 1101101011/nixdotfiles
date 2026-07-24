@@ -35,7 +35,7 @@ in
     laravel
     texliveFull
     libreoffice-still
-    # mangohud
+    mangohud
     nautilus
     # nufraw
     # nufraw-thumbnailer
