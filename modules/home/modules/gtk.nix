@@ -11,7 +11,7 @@
   config = lib.mkIf config.myGtk.enable {
     home.sessionVariables.GTK_THEME = "Gruvbox-Dark";
     home.pointerCursor = {
-      gtk.enable = true;
+      enable = true;
       package = pkgs.capitaine-cursors-themed;
       name = "Capitaine Cursors (Gruvbox)";
       size = 16;
