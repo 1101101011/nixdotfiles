@@ -8,66 +8,64 @@
   };
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    # R
+    # blueman
+    # nodejs_25
     alsa-utils
     bc
-    btop
-    bluez
     bluetui
-    # blueman
+    bluez
+    btop
     cmake
     cpio
     cronie
+    curl
     ffmpeg
     gcc
-    glibc
     glib
-    grimblast
+    glibc
+    gnutar
     grim
-    upower-notify
+    grimblast
     gtk2
     gtk3
     gtk4
     gum
+    gzip
     jq
     lazygit
     libgcc
+    libnotify
     lm_sensors
     lsd
     meson
     mpc
     nix-prefetch-git
-    # nodejs_25
+    ntfs3g
     openssl
     pfetch-rs
     playerctl
-    # R
     sass
     slurp
     socat
     stress-ng
     superfile
-    tree
     tmux
+    tree
     udiskie
     udisks
     unzip
     upower
+    upower-notify
     vim
     vulkan-tools
     wf-recorder
+    wget
     wirelesstools
     xdg-utils
     xplr
     yt-dlp
     zip
-    ### hyprland
-    libnotify
-    ntfs3g
-    ## ----
-    curl
-    wget
-    gnutar
-    gzip
   ];
 
   programs.nix-ld = {

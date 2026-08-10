@@ -23,23 +23,23 @@
           home.stateVersion = "26.05";
           programs.home-manager.enable = true;
 
-          myDunst.enable = true;
           myFonts.enable = true;
           myGtk.enable = true;
           myHypr.enable = true;
           kube-home.enable = true;
         }
 
-        /* (lib.mkIf (host == "Kurohikari") {
+        (lib.mkIf (host == "Kurohikari") {
           myDunst.enable = true;
           myFonts.enable = true;
           myGtk.enable = true;
           myHypr.enable = true;
           myService.enable = true;
-        }) */
+        })
 
         (lib.mkIf (host != "Kurohikari") {
           myService.enable = false;
+          myDunst.enable = false;
         })
       ];
     };

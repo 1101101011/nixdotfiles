@@ -16,48 +16,49 @@ let
 in
 {
   home.packages = with pkgs; [
-    # aseprite
     # anydesk
+    # aseprite
+    # blender
+    # cargo-tauri
+    # detect-it-easy
+    # ghidra
+    # gimp
+    # nufraw
+    # nufraw-thumbnailer
+    # qbittorrent
+    # retroarchCustom
+    # tetrio-desktop
+    # viber
+    # zenmap
+    # zoom-us
     bat
     beekeeper-studio
-    # blender
     brave
     cheese
     discord
     eww
     fastfetch
     fzf
-    # gimp
     hypridle
     hyprpaper
+    inputs.quickshell.packages."${stdenv.hostPlatform.system}".default
     inputs.zen-browser.packages."${stdenv.hostPlatform.system}".default
     kitty
     laravel
-    texliveFull
     libreoffice-still
     mangohud
     nautilus
-    # nufraw
-    # nufraw-thumbnailer
     nitch
     obs-studio
+    opencode
     pixieditor
     protonup-ng
-    # qbittorrent
+    qt6.qtwayland
     qview
-    # retroarchCustom
     rofi
-    # tetrio-desktop
-    # cargo-tauri
-    # viber
+    texliveFull
     vlc
     wl-clipboard
-    # zenmap
-    # zoom-us
-    # ghidra
-    # detect-it-easy
     zed-editor
-    inputs.quickshell.packages."${stdenv.hostPlatform.system}".default
-    qt6.qtwayland
   ];
 }
