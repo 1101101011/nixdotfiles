@@ -2,14 +2,20 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
+let
+  pkgs-stable = import inputs.nixpkgs-stable {
+    inherit (pkgs) system;
+  };
+in
 {
   options = {
     myGtk.enable = lib.mkEnableOption "Enable GTK theming and configuration";
   };
   config = lib.mkIf config.myGtk.enable {
-    # home.sessionVariables.GTK_THEME = "gruvterial";
+    home.sessionVariables.GTK_THEME = "Gruvbox-Dark";
     home.pointerCursor = {
       enable = true;
       package = pkgs.capitaine-cursors-themed;
@@ -18,31 +24,14 @@
     };
     gtk = {
       enable = true;
-      gtk4 = {
-        theme = {
-          package = pkgs.gruvterial-theme;
-          name = "gruvterial";
-        };
+      gtk4.theme = {
+        package = pkgs-stable.gruvbox-gtk-theme;
+        name = "Gruvbox-Dark";
       };
-      gtk3 = {
-        extraConfig = {
-          gtk-application-prefer-dark-theme = 1;
-        };
-        theme = {
-          package = pkgs.gruvterial-theme;
-          name = "gruvterial";
-        };
+      theme = {
+        package = pkgs-stable.gruvbox-gtk-theme;
+        name = "Gruvbox-Dark";
       };
-      /*
-           gtk4.theme = {
-          package = pkgs.gruvbox-gtk-theme;
-          name = "Gruvbox-Dark";
-        };
-        theme = {
-          package = pkgs.gruvbox-gtk-theme;
-          name = "Gruvbox-Dark";
-        };
-      */
       iconTheme = {
         name = "Gruvbox-Plus-Dark";
         package = pkgs.gruvbox-plus-icons.override {

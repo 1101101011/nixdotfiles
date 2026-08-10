@@ -2,6 +2,7 @@
   description = "Nixos Flake for my Laptop, Desktop and VM";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     home-manager = {
       url = "github:nix-community/home-manager"; # /release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +41,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-stable,
       ...
     }@inputs:
     let
