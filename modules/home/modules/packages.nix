@@ -32,7 +32,7 @@ in
     # zenmap
     # zoom-us
     bat
-    beekeeper-studio
+    # beekeeper-studio
     brave
     cheese
     discord
