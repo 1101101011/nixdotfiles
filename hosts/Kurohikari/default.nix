@@ -25,6 +25,6 @@
     vm.enable = true;
     wayland.enable = true;
     kube.enable = true;
-    printers.enable = false;
+    printers.enable = true;
   };
 }
