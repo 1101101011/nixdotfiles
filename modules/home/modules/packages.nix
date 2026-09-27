@@ -22,7 +22,9 @@ in
     # cargo-tauri
     # detect-it-easy
     # ghidra
-    # gimp
+    gimp
+    # darktable
+    rawtherapee
     # nufraw
     # nufraw-thumbnailer
     # qbittorrent
@@ -45,7 +47,7 @@ in
     inputs.zen-browser.packages."${stdenv.hostPlatform.system}".default
     kitty
     laravel
-    libreoffice-still
+    libreoffice
     mangohud
     nautilus
     nitch

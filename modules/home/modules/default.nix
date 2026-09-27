@@ -14,7 +14,7 @@
     ./services
     ./spicetify.nix
     ./starship
-    ./steam.nix
+    ./steamidra.nix
     ./xdg.nix
   ];
 }

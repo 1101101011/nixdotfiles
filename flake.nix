@@ -3,6 +3,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
+    steamidra = {
+      type = "file";
+      url = "https://api.github.com/repos/Midrags/SFF/tags";
+      flake = false;
+    };
     home-manager = {
       url = "github:nix-community/home-manager"; # /release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +23,11 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-crab = {
+      url = "github:ItszFinn/nix-crab";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.steamidra.follows = "steamidra";
     };
     showkeys = {
       url = "github:nvzone/showkeys";

@@ -35,11 +35,16 @@
           myGtk.enable = true;
           myHypr.enable = true;
           myService.enable = true;
+          mySteamidra.enable = false;
         })
 
         (lib.mkIf (host != "Kurohikari") {
           myService.enable = false;
           myDunst.enable = false;
+        })
+
+        (lib.mkIf (host == "Kuroha") {
+          mySteamidra.enable = true;
         })
       ];
     };

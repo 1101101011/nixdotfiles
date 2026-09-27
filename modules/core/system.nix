@@ -45,6 +45,7 @@
     openssl
     pfetch-rs
     playerctl
+    psmisc
     sass
     slurp
     socat
