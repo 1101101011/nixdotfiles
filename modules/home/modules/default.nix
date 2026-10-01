@@ -15,6 +15,7 @@
     ./spicetify.nix
     ./starship
     ./steamidra.nix
+    ./superfile
     ./xdg.nix
   ];
 }

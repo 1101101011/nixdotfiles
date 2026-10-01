@@ -6,8 +6,8 @@
 }:
 {
   imports = [ inputs.nix-crab.homeModules.default ];
-  optionns = {
-    mySteamidra.enable = lib.mkEnabledOption "Enable steamidra";
+  options = {
+    mySteamidra.enable = lib.mkEnableOption "Enable steamidra";
   };
   config = lib.mkIf config.mySteamidra.enable {
     programs.nix-crab = {

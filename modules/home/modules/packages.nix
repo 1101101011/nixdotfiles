@@ -59,6 +59,7 @@ in
     qview
     rofi
     texliveFull
+    unrar
     vlc
     wl-clipboard
     zed-editor
