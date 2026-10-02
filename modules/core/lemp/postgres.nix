@@ -26,7 +26,7 @@
         '';
       };
       pgadmin = {
-        enable = true;
+        enable = false;
         port = 5050;
         openFirewall = true;
         initialEmail = "admin@admin.com";

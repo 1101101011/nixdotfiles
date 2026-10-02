@@ -58,7 +58,10 @@ in
     qt6.qtwayland
     qview
     rofi
+    slides
+    presenterm
     texliveFull
+    # tuios
     unrar
     vlc
     wl-clipboard
