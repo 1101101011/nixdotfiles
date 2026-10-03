@@ -2,14 +2,8 @@
   config,
   pkgs,
   lib,
-  inputs,
   ...
 }:
-let
-  pkgs-stable = import inputs.nixpkgs-stable {
-    inherit (pkgs) system;
-  };
-in
 {
   options = {
     myGtk.enable = lib.mkEnableOption "Enable GTK theming and configuration";
@@ -25,11 +19,11 @@ in
     gtk = {
       enable = true;
       gtk4.theme = {
-        package = pkgs-stable.gruvbox-gtk-theme;
+        package = pkgs.gruvbox-gtk-theme;
         name = "Gruvbox-Dark";
       };
       theme = {
-        package = pkgs-stable.gruvbox-gtk-theme;
+        package = pkgs.gruvbox-gtk-theme;
         name = "Gruvbox-Dark";
       };
       iconTheme = {

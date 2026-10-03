@@ -27,6 +27,8 @@
         8000
       ];
       # allowedUDPPorts = [ ... ];
+      trustedInterfaces = [ "enp0s3" "wlp2s0" "tailscale0" ];
+      checkReversePath = false;
     };
     defaultGateway = "192.168.1.1";
     nameservers = [

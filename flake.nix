@@ -2,7 +2,6 @@
   description = "Nixos Flake for my Laptop, Desktop and VM";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     steamidra = {
       type = "file";
       url = "https://api.github.com/repos/Midrags/SFF/tags";
@@ -51,7 +50,6 @@
     {
       self,
       nixpkgs,
-      nixpkgs-stable,
       ...
     }@inputs:
     let

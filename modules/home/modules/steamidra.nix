@@ -12,7 +12,7 @@
   config = lib.mkIf config.mySteamidra.enable {
     programs.nix-crab = {
       steamidra.enable = true;
-      # slssteam.manageConfig = true;
+      slssteam.manageConfig = false;
     };
   };
 }
