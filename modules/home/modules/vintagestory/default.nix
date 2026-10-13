@@ -7,8 +7,9 @@
 let
   vintageStory = pkgs.vintagestory.overrideAttrs (old: {
     postInstall = (old.postInstall or "") + ''
-      install -Dm644 ${./VintagestoryLib.dll} \
-        "$out/share/vintagestory/CustomPatch.dll"
+      install -m644 \
+        ${./VintagestoryLib.dll} \
+        "$out/share/vintagestory/VintagestoryLib.dll"
     '';
   });
 in
