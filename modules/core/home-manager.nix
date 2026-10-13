@@ -36,6 +36,7 @@
           myHypr.enable = true;
           myService.enable = true;
           mySteamidra.enable = false;
+          myVintageStory.enable = false;
         })
 
         (lib.mkIf (host != "Kurohikari") {
@@ -45,6 +46,7 @@
 
         (lib.mkIf (host == "Kuroha") {
           mySteamidra.enable = true;
+          myVintageStory.enable = true;
         })
       ];
     };

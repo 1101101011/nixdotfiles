@@ -40,6 +40,7 @@
         openssh.enable = true;
         devmon.enable = true;
         gvfs.enable = true;
+        logmein-hamachi.enable = true;
         tailscale.enable = true;
         udisks2.enable = true;
         upower.enable = true;

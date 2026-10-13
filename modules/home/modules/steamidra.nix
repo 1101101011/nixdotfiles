@@ -13,6 +13,7 @@
     programs.nix-crab = {
       steamidra.enable = true;
       slssteam.manageConfig = false;
+      luatools.enable = true;
     };
   };
 }

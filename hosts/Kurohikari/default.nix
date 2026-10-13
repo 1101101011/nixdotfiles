@@ -21,7 +21,7 @@
       ];
     };
     #core stuff
-    steam.enable = true;
+    steam.enable = false;
     vm.enable = true;
     wayland.enable = true;
     kube.enable = true;

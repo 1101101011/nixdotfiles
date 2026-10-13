@@ -12,8 +12,8 @@
     steam.enable = lib.mkEnableOption "Enable Steam and related programs";
   };
   config = lib.mkIf config.steam.enable {
-    programs.nix-crab.slssteam.enable = true;
-    programs.nix-crab.cloudredirect.enable = true;
+    # programs.nix-crab.slssteam.enable = true;
+    programs.nix-crab.slssteam-moon.enable = true;
     # programs.nix-crab.millennium.enable = true;  # optional
     # programs.nix-crab.downgrade.enable = true;   # optional
     programs = {

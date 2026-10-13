@@ -25,6 +25,7 @@
         3306
         5050
         8000
+        42420
       ];
       # allowedUDPPorts = [ ... ];
       trustedInterfaces = [ "enp0s3" "wlp2s0" "tailscale0" ];

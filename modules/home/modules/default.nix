@@ -16,6 +16,7 @@
     ./starship
     ./steamidra.nix
     ./superfile
+    ./vintagestory
     ./xdg.nix
   ];
 }
