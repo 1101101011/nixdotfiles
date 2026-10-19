@@ -37,5 +37,10 @@
         size = 11;
       };
     };
+    qt = {
+      enable = true;
+      platformTheme.name = "gtk3";
+    };
+    home.sessionVariables.QT_QPA_PLATFORMTHEME = "gtk3";
   };
 }
