@@ -90,3 +90,19 @@ enable_md5_checksum = false
 #
 # Zoxide support for the fast navigation
 zoxide_support = false
+
+# Scrolling
+page_scroll_size = 0
+
+# File panel columns
+file_panel_extra_columns = 0
+file_panel_name_percent = 50
+
+# Selection icons
+show_select_icons = true
+
+# File preview
+enable_file_preview_border = false
+
+# Sidebar sections
+sidebar_sections = ["home", "pinned", "disks"]
