@@ -1,18 +1,19 @@
 return {
   setup = function()
-    vim.o.clipboard = 'unnamedplus'
-    vim.o.number = true;
-    vim.o.relativenumber = true;
-    vim.o.signcolumn = 'yes';
-    vim.opt.clipboard.append = "unnamedplus";
-    vim.opt.cursorline = false;
-    vim.setcursoroutline = true;
-    vim.o.foldmethod = 'manual';
+    vim.o.clipboard = "unnamedplus"
+    vim.o.number = true
+    vim.o.relativenumber = true
+    vim.o.signcolumn = "yes"
+    vim.opt.colorcolumn = "80"
+    vim.opt.clipboard.append = "unnamedplus"
+    vim.opt.cursorline = false
+    vim.setcursoroutline = true
+    vim.o.foldmethod = "manual"
     -- vim.o.foldexpr = 'nvim_treesitter#foldexpr()';
-    vim.o.foldlevel = 99;
+    vim.o.foldlevel = 99
     -- vim.o.undofile = true;
-    vim.o.foldenable = true;
-    vim.o.foldcolumn = '1';
+    vim.o.foldenable = true
+    vim.o.foldcolumn = "1"
     vim.cmd("set laststatus=3")
     vim.cmd("set expandtab")
     vim.cmd("set tabstop=2")
@@ -25,12 +26,12 @@ return {
     vim.keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true })
     vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true })
     vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
-    vim.cmd [[
+    vim.cmd([[
       highlight clear SignColumn
       highlight SignColumn guibg=CLEAR
       highlight clear FoldColumn
       highlight FoldColumn guibg=CLEAR
-    ]]
+    ]])
     vim.opt.fillchars = { eob = " " }
-  end
+  end,
 }

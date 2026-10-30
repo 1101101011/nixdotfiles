@@ -27,7 +27,7 @@ in
     rawtherapee
     # nufraw
     # nufraw-thumbnailer
-    # qbittorrent
+    qbittorrent
     # retroarchCustom
     # tetrio-desktop
     # viber

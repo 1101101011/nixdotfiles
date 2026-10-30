@@ -21,9 +21,6 @@
     cronie
     curl
     ffmpeg
-    gcc
-    glib
-    glibc
     gnutar
     grim
     grimblast
@@ -34,7 +31,6 @@
     gzip
     jq
     lazygit
-    libgcc
     libnotify
     lm_sensors
     lsd
