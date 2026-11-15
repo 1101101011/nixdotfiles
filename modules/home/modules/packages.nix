@@ -52,7 +52,7 @@ in
     nautilus
     nitch
     obs-studio
-    opencode
+    # opencode
     pixieditor
     protonup-ng
     qt6.qtwayland

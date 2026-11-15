@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   nix.settings = {
     experimental-features = [
       "nix-command"
@@ -7,6 +6,7 @@
     ];
   };
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.problems.handlers."gtk+".broken = "warn";
   environment.systemPackages = with pkgs; [
     # R
     # blueman
@@ -24,7 +24,6 @@
     gnutar
     grim
     grimblast
-    gtk2
     gtk3
     gtk4
     gum
