@@ -37,6 +37,7 @@ in
     # beekeeper-studio
     brave
     cheese
+    deepseek-harness
     discord
     eww
     fastfetch
@@ -52,7 +53,7 @@ in
     nautilus
     nitch
     obs-studio
-    # opencode
+    opencode
     pixieditor
     protonup-ng
     qt6.qtwayland
